@@ -1,0 +1,9 @@
+{% block div %}
+<div>
+<h3> Новые посты {{name_post}}</h3>
+{% for post in posts %}
+    {{ post }}<br>
+{% endfor %}
+</div>
+
+{% endblock div %}

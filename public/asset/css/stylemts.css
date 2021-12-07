@@ -1,0 +1,2107 @@
+body {font-family: Arial;}
+
+*{margin: 0px;padding: 0px; box-sizing: border-box;} 
+
+a{text-decoration: none;}
+
+/* ===================== Верхний блок страницы  ============================================================ */
+/*====== Меню для мобильных устройств- строка появляющаяся в верхней части страницы 
+при ширине менее 1100px вместо меню для desktop устройств======================= */
+#menuMobile{
+  overflow: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  
+}
+
+#menuMobile_logo{
+  width: 120px;
+  height: 35px;
+  margin-left: 7%;
+  background-image: url(../img/logo-mts.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size:100%;
+  /*border: 1px solid red;*/
+}
+@media screen and (min-width:1100px){
+  #menuMobile{display: none;}
+}
+#menuMobile_button{
+  /*display: flex;
+  flex-direction: column;
+  justify-content: center;*/
+  width: 33px;
+  height: 35px;
+  background-image: url(../img/menubutton.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: grey;
+  padding: 4px;
+  margin-right: 1%;
+  z-index: 20; 
+}
+
+/* кнопка открытия бокового мобильного меню ===  три полоски===*/
+#menuMobile_button a{
+  display: block;
+  opacity: 0;
+  width: 33px;
+  height: 40px;
+  /*border: 1px solid red;*/  
+}
+/* ========= Блок - мобильное  меню всплывающее справа ======================= */
+
+#Personal_Area a{
+  background-image: url(../img/castle.jpeg);
+  background-repeat: no-repeat;
+  background-size: 18%;
+  background-position: left;
+  color: #727272;
+      transition: all 1s linear 0s;
+      text-shadow: 0px 0px 1.2px #B3B3B3;
+      letter-spacing: .7px;
+      font-size: 1rem;
+      padding: 0px 0px 0px 50px;
+      /*border: 1px solid red;*/
+      margin-top: 100px;
+}
+/* кнопка закрытия бокового мобильного меню "Х"  */
+a#menuMobile_right2{
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: grey;
+  text-shadow: 0px 0px  1px grey;
+  /*border: 1px solid red;*/
+  margin-left:80px;
+  position: fixed;
+  padding: 0px 2px 0px 2px;
+  margin-top: -3px;
+}
+/* Общие стили окна всплывающего мобильного меня */
+#menuMobileHight{
+  position: absolute;
+  height: 0%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  background-color: yellow;
+}
+#menuMobile_right{
+  height: 420px;
+  width: 350px;
+  overflow:auto;
+  border: 2px solid #DDDDDD;
+  position: absolute;
+  z-index: 15;
+  /*margin-left: 400px;*/
+  background-color: white;
+  color: black;
+  overflow: auto;
+  position: fixed;
+  margin-top: -40px;
+  padding-top: 5px;
+  transition: all .7s linear .2s;
+  z-index: 23;
+  margin-right: -350px;
+}
+#menuMobile_right:target{color:red; margin-right:0px;}
+#menuMobile_right1:target{color:black;background-color:white; margin-right: -350px;}
+
+
+/* ==== Мобильное всплывающее справа меню-Раздел для клиентов и бизнеса ======= */
+    .topLinksMobile a#clientMobile{
+      color: #D90011;
+      text-shadow: 0px 0px 1.2px #F08181;
+      letter-spacing: .7px;
+      font-size: 13px;
+      transition: all .3s linear 0s;
+    }
+    .topLinksMobile a:not(#clientMobile){
+      color: #727272;
+      transition: all 1s linear 0s;
+      text-shadow: 0px 0px 1.2px #B3B3B3;
+      letter-spacing: .7px;
+      font-size: 13px;
+      
+    }
+    .topLinksMobile a:not(#client):hover{
+      transform: scale(1.008);
+      color: #D90011;
+      transition: all .3s linear 0s;
+      text-shadow: 0px 0px 1.05px red;
+    }
+
+    .topLinksMobile{
+      display: flex;
+      overflow: hidden;
+      width: 100%;
+      min-width: 200px;
+      /*border: 1px solid green;*/
+      margin-top: 5px;
+    }
+    .topLinksMobile>ul{
+      list-style-type: none; 
+    }
+    /* ==== Мобильное меню-Раздел поиск по сайту ======= */
+    #menuMobileSearch{
+      background-color:#EEF1F4 ;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .searchMobile{
+      width: 90%;
+      height: 35px;
+      border: 1px solid #DDDDDD;
+      background-color: white;
+      background-image: url(../img/search.png);
+      background-repeat: no-repeat;
+      background-position: left;
+      background-size: 50px 50px;
+      border-radius: 5px;  
+  } 
+    a#searchMobile{
+      width: 120px;
+      height: 35px;
+      padding: 8px 10px 0px 50px;
+      display: block;
+      /*border: 1px solid red;*/
+      color: #727272;
+      transition: all .3s linear 0s;
+      text-shadow: 0px 0px 1.2px #B3B3B3;
+      letter-spacing: .7px;
+      font-size: 13px;
+  }
+
+    /* ==== Мобильное меню-Раздел Внутреннее Суб Меню ======= */
+    .page_subMenu_links_Mobile{
+      overflow: auto;
+      height: 400px;
+      /*border: 2px solid blue; */
+      
+    }
+    
+/* ========= Мобильное меню -  раздел стилей для подразделов субменю  Связь, финансы, и т д==============*/
+        .ulMobile{
+          height: 30px;
+          overflow:auto;
+          /*border: 1px solid red;*/
+          transition: all .5s ease .3s;
+        }
+        .ulMobile a{
+          display: block;
+          /*border: 1px solid green;*/
+          padding: 10px;
+        }
+        .ulMobile:hover{
+          height: 170px;
+        }
+        /* активная стрелка треугольник состояния  подзаголовков субменю при наведении */
+        .ulMobile a:hover+.triangleMobileUl {
+          transition: all .3s linear .0s;
+          transform: rotateZ(180deg); 
+          transform-origin: 10px 10px 0;
+        }
+        
+        .triangleMobileUl{
+          float: left;
+          width: 20px;
+          height: 20px;
+          transition: all .3s ease .3s;
+          position: relative;
+          margin: -33px 0px 0px 300px;
+          /*border: 1px solid yellow;*/
+        }
+        
+        .triangleMobileUl::after {
+          content: ''; 
+          position: absolute; /*  Чтобы не забыть!!!!!! Абсолютное позиционирование */
+          left: 6px; bottom: 4px; /* Положение треугольника */
+          border: 4px solid transparent; /* Прозрачные границы */
+          border-top: 4px solid black; /* Добавляем треугольник */
+          transition: all .3s ease 0s;
+        }
+        
+        .ulMobile a:hover+.triangleMobileUl::after {
+          transition: all 0.3s linear .1s;
+          border-top: 4px solid red;
+        }
+        /* стили ссылок заголовков   и подзаголовком меню (li) мобильного субменю */
+        a.menubottonMobile, .connectMobile ul li a,.financeMobile ul li a,.serviceMobile ul li a,
+        .internetMobile ul li a,.helpMobile ul li a{
+          /*border: 1px solid blue;*/
+          display:block;
+          color: #3B3B3B;
+          letter-spacing: .7px;
+          transition: all .3s linear .3s;
+        }
+        .connectMobile ul li a,.financeMobile ul li a,.serviceMobile ul li a,
+        .internetMobile ul li a,.helpMobile ul li a{
+          font-size: .8rem;
+        }
+        a.menubottonMobile{
+          font-size: 1rem;
+          font-weight: bold;
+          padding-top: 5px;
+        }
+        
+        .menubottonMobile, .connectMobile ul li,.financeMobile ul li,.serviceMobile ul li,
+        .internetMobile ul li,.helpMobile ul li{
+          height: 30px;
+          transition: all .3s linear .3s;
+          /*border: 1px solid green;*/
+          /*padding-right: 100px;*/
+        }
+        
+        
+/* активные стрелки треугольники заголовков внутреннего мобильного субменю */
+        .triangleMobile{
+          width: 20px;
+          height: 20px;
+          transition: all .3s ease .1s;
+          position: relative;
+          margin: -28px 0px 0px 320px;
+          /*border: 1px solid yellow;*/
+        }
+        
+        .triangleMobile::after {
+          content: ''; 
+          position: absolute; /*  Чтобы не забыть!!!!!! Абсолютное позиционирование */
+          left: 6px; bottom: 4px; /* Положение треугольника */
+          border: 4px solid transparent; /* Прозрачные границы */
+          border-top: 4px solid black; /* Добавляем треугольник */
+          transition: all .3s ease 0s;
+        }
+        a.menubottonMobile:hover+.triangleMobile {
+          transition: all .3s linear .1s;
+          transform: rotateZ(180deg);
+        }
+        a.menubottonMobile:hover+.triangleMobile::after {
+          transition: all 0.3s linear .1s;
+          border-top: 4px solid red;
+        }
+/* стили ссылок заголовков мобильного субменю */
+        
+        a.menubottonMobile:hover{
+          transition: all 0.3s linear 0s;
+          color: #D20011;
+        } 
+        
+
+ /* =======================  Мобильное- Выпадающие вниз вкладки  из субменю 
+ общие для всех выпадающих вкладок стили          ======================= */
+                .menubottomMobile, .menubottomMobile a{
+                    color: #3B3B3B;
+                }
+                
+                .menubottomMobile ul{
+                    list-style-type: none;   
+                }
+                .connectMobile, .financeMobile, .serviceMobile, .internetMobile, .helpMobile{
+                    /*border: 1px solid red;*/
+                    overflow: auto;
+                    height: 5px;
+                    opacity: 0;
+                    transition: all 0.3s linear .3s;   
+                }
+                .page_subMenu_links_Mobile ul li a:hover{
+                  color: #D20011;
+                }
+                
+                a#connectbottonMobile:hover+div+.connectMobile, .connectMobile:hover, a#financebottonMobile:hover+div+.financeMobile, .financeMobile:hover,
+                a#servicebottonMobile:hover+div+.serviceMobile, .serviceMobile:hover,a#internetbottonMobile:hover+div+.internetMobile, .internetMobile:hover,
+                a#helpbottonMobile:hover+div+.helpMobile, .helpMobile:hover{
+                    height: 300px;
+                    opacity: 1;
+                    transition: all 0.5s linear .3s;
+                    background-color: white;  
+                }
+ /* =======================  Стили Мобильное меню -  Выпадающее вниз  подразделы субменю (связь интернетб сервич помощь  финансы ================= */
+                        .connectMobile,.financeMobile,.serviceMobile,.internetMobile,.helpMobile{
+                          transition: all 0.3s linear .1s;
+                          overflow: hidden; 
+                          
+                        }
+                          
+ 
+ 
+/*  ====== Нижняя часть меню для мобильных устройств=========== */
+                              #menuMobileBottom{
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: flex-start;
+                                background-color: #595959;
+                                position: fixed;
+                                margin-top: -115px;
+                                width: 347px;
+                              }
+                            /* === поддержка ======= */
+                            #support{
+                                background-image: url(../img/support.jpeg);
+                                background-repeat: no-repeat;
+                                background-size: 40px 40px;
+                                background-position: left;
+                                color: white;
+                                padding: 5px 0px 5px 50px;
+                            } 
+                            /*====Все сервисы ======*/
+                            #othrServiceMobile{
+                                background-image: url(../img/othermobile.jpeg);
+                                background-repeat: no-repeat;
+                                background-size: 40px 40px;
+                                background-position: left;
+                                color: white;
+                                padding: 5px 0px 5px 50px;
+                          } 
+                             /*=== пополнение и оплата ============== */
+                            #cashmobile{
+                                background-image: url(../img/cashmobile.jpeg);
+                                background-repeat: no-repeat;
+                                background-size: 40px 40px;
+                                background-position: left;
+                                color: white;
+                                padding: 5px 0px 5px 50px;
+                          } 
+                           /*=== Блок содержащий вкладки выбор языка и "глаз"===*/
+                                      .topToggleMobile{
+                                        width: 100%;
+                                        height: 25px;
+                                        /*border: 1px solid blue;*/
+                                        display: flex;
+                                        justify-content: flex-start;
+                                        align-items:flex-start; 
+                                        background-color: white;
+                                      }
+                                      .topToggleMobile span{ 
+                                        height: 20px;
+                                        text-align: left;
+                                        margin: 4px 5px 0px 15px;  
+                                      }
+                                      .topToggleMobile a{ 
+                                        margin: 0px 15px 0px 0px; 
+                                        color:  #595959;
+
+                                      }
+                                      .topToggleMobile span:not(:last-child){
+                                        border-right: 1px solid  #D4D4D4;  
+                                      }
+                                      /*=== Глаз ====== */
+                                      #eyeMobile{
+                                        height: 20px;
+                                        padding: 0px;
+                                        margin: 1px 0px 0px 5px;
+                                        background-image: url(../img/eye.png);
+                                        background-repeat: no-repeat;
+                                        background-size: 55px 40px;
+                                        background-position: center;
+                                      }
+                                      #eyeMobile a{
+                                        color: white;
+                                        opacity: 0;
+                                      }
+                            
+                              
+
+ /*================Верхняяя часть страницы!!!!!=========================================================================================*/
+/* ======== Меню для desktop устройств ===================================================================
+============================================================================================================= */
+.pageMenu{
+    /*border: 1px solid red;*/
+    position: relative;
+    width: 100%;
+    z-index: 5;
+}
+.blockTop a:not(#client):hover{
+    transform: scale(1.008);
+    color: #D90011;
+    transition: all .3s linear 0s;
+    text-shadow: 0px 0px 1.05px red;
+}
+.page_subMenu_links a:not(#search):hover{
+    transform: scale(1.008);
+    color: #D90011;
+    transition: all .3s linear 0s;   
+}
+@media screen and (max-width:1100px){
+    .pageMenu{
+    display: none;  
+}
+}
+/* =====================  Верхняя часть меню  ==================== */
+.menu{
+    width: 100%;
+    height: 40px;
+    /*border: 1px solid black;*/
+}
+.menuTop{
+    width: 100%;
+    height: 40px;
+    /*border: 4px solid blue;*/
+}
+.containerTop{
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+}
+
+
+.blockTop{
+    width: 100%;
+    height: 40px;
+    /*border: 1px solid green;*/
+    position: relative;
+    display: flex;
+    margin-left: 2%;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.blockTop a{
+    display: block;
+    padding: 5px 20px 12px 20px;
+}
+.blockTop a#client{
+    color: #D90011;
+    text-shadow: 0px 0px 1.2px #F08181;
+    letter-spacing: .7px;
+    font-size: 13px;
+    transition: all .3s linear 0s;
+}
+.blockTop a:not(#client){
+    color: #727272;
+    transition: all 1s linear 0s;
+    text-shadow: 0px 0px 1.2px #B3B3B3;
+    letter-spacing: .7px;
+    font-size: 13px;
+}
+ 
+.topLinks{
+    display: flex;
+    overflow: hidden;
+    width: 390px;
+    min-width: 200px;
+    /*border: 1px solid green;*/
+}
+.topLinks  ul  li{
+    float: left;
+}
+
+.topLinks>ul{
+    list-style-type: none;   
+}
+
+.topToggle{
+    max-width: 240px;
+    height: 40px;
+    /*border: 1px solid blue;*/
+    display: flex;
+    justify-content: flex-start;
+    align-items:center; 
+    margin-left: 35.5%;
+}
+.topToggle span{ 
+    height: 40px;
+    text-align: center;  
+}
+.topToggle span:not(:last-child){
+    border-right: 1px solid  #D4D4D4; 
+    
+}
+#eye{
+    height: 35px;
+    padding: 0px;
+    margin: -18px 0px 0px 0px;
+    background-image: url(../img/eye.png);
+    background-repeat: no-repeat;
+    background-size: 55px 40px;
+}
+#eye a{
+      color: white;
+      opacity: 0;
+}
+
+.topsysLinks{
+    margin-top: -2px;
+    padding-left: 1%;
+    padding-top: 2px;
+    width: 220px;
+    min-width: 180px;
+    background-image: url(../img/cash.png);
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: 35px 35px;
+}
+
+/* ===================   Нижняя часть меню  ===================== */
+    .nav{
+        z-index: 4;
+    }
+    .page_subMenu_box{
+        display: flex;
+        position: relative;
+        align-items: center;
+        /*flex-wrap: wrap;*/
+        /*border: 1px solid black;*/
+    }
+    @media screen and (min-width:1225px){
+      .page_subMenu_box{
+        justify-content:flex-start;
+        flex-direction: row;
+      }
+    }
+    /*@media screen and (max-width:1225px){
+      .page_subMenu_box{
+        
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+      }
+      .page_subMenu_enter{
+        align-self: flex-end;
+      }
+    }*/
+/* ========= Логотип меню ==============*/
+      .page_subMenu_logo{
+          min-width: 150px;
+          height: 75px;
+          margin-left: 2%;
+          background-image: url(../img/logo-mts.png);
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: 130px 60px;
+          /*border: 1px solid red;*/
+      }
+/* ========= основная часть нижнего раздела меню ==============*/
+      .page_subMenu_links{
+          display: flex;
+          position: relative;
+          margin-left: 2%;
+          flex-direction:row;
+          justify-content:flex-start;
+          align-items: center;
+          height: 75px;
+          width: 50%;
+          /*border: 1px solid blue;*/
+      }
+      a.menubotton:not(#search){
+          font-size: 12.8px;
+          font-weight: bold;
+          color: #3B3B3B;
+          letter-spacing: .7px;
+          transition: all .3s linear 0s;
+      }
+      .page_subMenu_links>div{
+          position: relative;
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-end;
+          height: 75px;
+          align-items: center;
+          white-space: nowrap;
+          transition: all .3s ease 0s;
+      }
+
+      .triangle{
+          width: 20px;
+          height: 20px;
+          transition: all .3s ease 0s;
+          position: absolute;
+          margin-top: 0px;
+        }
+      .triangle::after {
+          content: ''; 
+          position: absolute; /*  Чтобы не забыть!!!!!! Абсолютное позиционирование */
+          left: 6px; bottom: 4px; /* Положение треугольника */
+          border: 4px solid transparent; /* Прозрачные границы */
+          border-top: 4px solid black; /* Добавляем треугольник */
+          transition: all .3s ease 0s;
+        }
+      a.menubotton:not(#search):hover+.triangle {
+          transition: all .3s linear 0s;
+          transform: rotateZ(180deg);
+        }
+      a.menubotton:not(#search):hover+.triangle::after {
+          transition: all 0.3s linear 0s;
+          border-top: 4px solid red;
+        }
+
+      a.menubotton {
+          display: block;
+          border-bottom: 3px solid white;
+          padding: 27px 20px 25px 20px;
+          float: left;
+        }
+      a.menubotton:not(#search):hover{
+          border-bottom: 3px solid red;
+          transition: all 0.3s linear 0s;
+        } 
+        
+
+   /* =======================  Выпадающее вниз субменю ==================== */
+          .menubottom, .menubottom a{
+              color: #3B3B3B;
+          }
+          .menubottom ul{
+              margin-right: 1.5%;
+              list-style-type: none;
+          }
+          .conection, .finance, .service, .internet, .help{
+              display: flex;
+              flex-direction: row;
+              position: absolute;
+              overflow: hidden;
+              transition: all 0.3s linear .5s;
+          }
+          .conection ul li:not(:first-child),.finance ul li:not(:first-child),.service ul li:not(:first-child),
+          .internet ul li:not(:first-child),.help ul li:not(:first-child){
+              font-size: 12.8px;
+              letter-spacing: .7px;
+              width: 110px;
+              white-space:pre-wrap;
+              margin-top: 11px;
+              line-height: 17px;
+          }
+          .conection ul li:first-child,.finance ul li:first-child,.service ul li:first-child,
+          .internet ul li:first-child,.help ul li:first-child{
+              font-size: 15px;
+              letter-spacing: .7px;
+              width: 130px;
+              white-space:pre-wrap;
+              margin-top: 15px;
+              font-weight: bold;
+              line-height: 19px;
+          }
+          a#conectionbotton:hover+span+.conection, .conection:hover, a#financebotton:hover+div+.finance, .finance:hover,
+          a#servicebotton:hover+div+.service, .service:hover,a#internetbotton:hover+div+.internet, .internet:hover,
+          a#helpbotton:hover+div+.help, .help:hover{
+                height: 360px;
+                margin-top: 438px;
+                transition: all 0.3s linear .5s;
+                background-color: white;
+          }
+   
+   /* =======================  Выпадающее Субменю "Связь". ================= */
+            .conection{
+                margin-top: 72px;
+                margin-left: 190px;
+                -webkit-margin-right:-1017px;
+                margin-right: -1017px;
+                width: 1581%;
+                height: 0px;
+                padding-left: 260%;   
+            }
+              
+   
+   
+/* =======================  Выпадающее Субменю "Финансы". ================= */
+            .finance{
+                display: flex;
+                flex-direction: row;
+                position: absolute;
+                margin-top: 72px;
+                margin-left: 200px;
+                align-items: flex-start;
+                margin-right: -1017px;
+                width: 1575%;
+                height: 0px;
+                overflow: hidden;
+                padding-left: 440%;
+                transition: all 0.3s linear .5s;   
+            }
+     
+/* =======================  Выпадающее Субменю "Сервисы для жизни". ================= */
+            .service{
+                display: flex;
+                flex-direction: row;
+                position: absolute;
+                margin-top: 72px;
+                margin-left: 0%;
+                align-items: flex-start;
+                margin-right: -397%;
+                width: 713%;
+                height: 0px;
+                overflow: hidden;
+                padding-left: 120%;
+                transition: all 0.3s linear .5s;   
+            }
+     
+  
+/* =======================  Выпадающее Субменю "Интернет-магазин". ================= */
+            .internet{
+                display: flex;
+                flex-direction: row;
+                position: absolute;
+                margin-top: 72px;
+                margin-left: 0%;
+                align-items: flex-start;
+                margin-right: -330%;
+                width: 813%;
+                height: 0px;
+                overflow: hidden;
+                padding-left: 170%;
+                transition: all 0.3s linear .5s;
+            }
+     
+/* =======================  Выпадающее Субменю "Помощь". ================= */
+            .help{
+                display: flex;
+                flex-direction: row;
+                position: absolute;
+                margin-top: 72px;
+                margin-left: 0%;
+                align-items: flex-start;
+                -webkit-margin-left:-465%;
+                margin-right: -465%;
+                width: 1323%;
+                height: 0px;
+                overflow: hidden;
+                padding-left: 230%;
+                transition: all 0.3s linear .5s;  
+            }
+     
+   /* ======================= Блок поиска  ======================== */ 
+              .search{
+                  width: 120px;
+                  height: 45px;
+                  /*border: 1px solid red;*/
+                  margin-left: 8%;
+                  margin-top: 5px;
+                  background-image: url(../img/search.png);
+                  background-repeat: no-repeat;
+                  background-position: left;
+                  background-size: 50px 50px;
+                  padding: 10px 0px 0px 0px;
+              } 
+              a#search{
+                  width: 10%;
+                  height: 35px;
+                  padding: 0px 10px 0px 55px;
+                  border-right: 1px solid  #D4D4D4; 
+                  color: #727272;
+                  transition: all .3s linear 0s;
+                  text-shadow: 0px 0px 1.2px #B3B3B3;
+                  letter-spacing: .7px;
+                  font-size: 13px;
+              }
+/* ========= Правая сторона нижней части меню ==============*/
+              .page_subMenu_enter{
+                  display: flex;
+                  align-items: center;
+                  margin-left: 5%;
+                  z-index: 3;
+              }
+
+              .basket{
+                  width: 47px;
+                  height: 47px;
+                  margin-left: 1%;
+                  margin-top: 10px;
+                  /*border: 1px solid red;*/
+                  background-image: url(../img/basket.png);
+                  background-repeat: no-repeat;
+                  background-position: center;
+                  background-size: 49px 49px;
+              }
+              .other{
+                  display: flex;
+                  flex-direction: column;
+                  width: 47px;
+                  height: 47px;
+                  margin-left: 1%;
+                  /*border: 1px solid red;*/
+                  display: flex;
+                  position: relative;
+                  justify-content: center;
+                  align-items: center;
+                  z-index: 2;
+              }
+              .other a{
+                  position: absolute;
+                  max-width: 47px;
+                  height: 30px;
+                  /*border: 1px solid black;*/
+                  padding: 12px;
+              }
+              .other a:hover+div{
+                  transition: all .3s linear .3s;
+                  color: red; 
+              }
+              #other1{
+                  width: 47px;
+                  height: 47px;
+                  /*border: 1px solid green;*/
+                  color: #7E868E
+                  font-weight:bold;
+                  font-size:25px;
+                  text-shadow: 0px 0px 1px #B3B3B3;
+                  letter-spacing: 1px;
+                  white-space:pre-wrap;
+                  word-break: break-all;
+                  transition: all .3s linear 0s;
+                  line-height: 8px;
+                  text-align: justify;
+                  padding-left: 10px;
+                  padding-top: 6px;
+              }
+ /* ===============. открывающееся меню разные сервисы ================= */
+              .menuother {
+                  border: .5px solid #D4D4D4;
+                  border-radius: 7px;
+                  padding: 20px;
+                  position: absolute;
+                  width: 630%; height: 0px;
+                  margin-top: -655px;
+                  box-shadow: 0px 0px 1px .5px #D4D4D4;
+                  display: flex;
+                  padding: -100px;
+                  flex-wrap: wrap;
+                  opacity: 0;
+                  z-index: 8;
+                  /*overflow: hidden;*/
+                  background-color: none;
+                }
+                .menuother::before, .menuother::after {
+                  content: ''; 
+                  position: absolute;
+                  left: 47%; bottom: 468px;
+                  border: 10px solid transparent;
+                  border-bottom: 10px solid #D4D4D4;
+                }
+                .menuother::after {
+                  border-bottom: 10px solid white;
+                  bottom: 467px;
+                }
+                .menuother span{
+                  /*border: 1px solid red;*/
+                  width: 125px;
+                  height: 30px;
+                  margin-right: 2px;
+                  margin-top: 0px;
+                  background-image: url(../img/МТС.jpeg);
+                  background-repeat: no-repeat;
+                  background-position:left;
+                  background-size: 28px 28px;
+                }
+                .menuother span a{
+                  display: block;
+                  /*border: 1px solid blue;*/
+                  font-size: 12.8px;
+                  letter-spacing: .7px;
+                  min-width: 125px;
+                    /*white-space:pre-wrap;*/
+                    /*margin-top: 15px;*/
+                  line-height: 17px;
+                  color: #3B3B3B;
+                  padding-top: 3px;
+                  padding-left: 35px;
+                }
+                  .other a:hover+div+.menuother, .menuother:hover{
+                  transition: height 0s linear 0s, 
+                  opacity .3s linear .3s, 
+                  margin-top 0s linear 0s,
+                  background-color 0s linear 0s;
+                  height: 470px; 
+                  opacity: 1;
+                  margin-top: 535px;
+                  background-color: white;    
+              }
+
+                .menuother span a:hover {
+                    color:red;  
+                }
+    
+/* ============ точки в кнопке меню "другие сервисы" =====*/
+        
+        .enter a{
+            margin-left: 20px;
+            padding: 17px 32px 17px 32px;
+            border-radius: 6px;
+            letter-spacing: .7px;
+            font-size: 13px;
+            color: white;
+            background-color: #D20011;
+        }
+
+
+/* ========================= Слайдер с картинками Главный ========================= */
+
+article #slider2{
+    margin: 0px auto;
+    width: 100%;
+    text-align:left;
+    /*border: 1px solid red;*/
+}
+article #slider2 input[type="radio"]{display: none;}
+article #slider2 label{
+    cursor: pointer;
+    text-decoration: none;
+}
+#slides {
+    padding: 0px;
+    /*border: 1px solid #ccc;*/
+    position: relative;
+    overflow: hidden;
+}
+#overflow{
+    overflow: hidden;
+    width: 100%;
+}
+
+#slide11:checked ~ #slides .inner{margin-left : 0;}
+#slide12:checked ~ #slides .inner{margin-left: -100%;}
+#slide13:checked ~ #slides .inner{margin-left: -200%;}
+#slide14:checked ~ #slides .inner{margin-left: -300%;}
+#slides .inner{
+    transition: margin-left .5s linear;
+    width: 400%;
+    line-height: 0;
+    height: 415px;
+}
+#slides .slide{
+    width: 25%;
+    float: left;
+    display: block;
+    color: white;  
+}
+#slides .slide_1,#slides .slide_2,#slides .slide_3,#slides .slide_4{
+    background-repeat: no-repeat;
+    background-position:top;
+    background-size: cover;
+    overflow: hidden;
+}
+#slides .slide_1{background-image: url(../img/slider1.png);}
+#slides .slide_2{background-image: url(../img/slider2.png);}
+#slides .slide_3{background-image: url(../img/slider3.png);}
+#slides .slide_4{background-image: url(../img/slider4.png);}
+.slide-content{padding: 20px;}
+
+.inner h2{
+    position: absolute;
+    margin-top: 270px;
+    font-weight: bold;
+    margin-left: 5%;
+    text-align: left;
+    white-space: pre-wrap;
+}
+.inner p a{
+    /*position: absolute;*/
+    font-size: 22px;
+    color: white;
+    text-shadow: 0px 0px 2px  black;
+    /*color: #3B3B3B;*/
+    letter-spacing: .7px;
+    transition: all .3s linear 0s;
+}
+.inner p {
+  position: absolute;
+    margin-left: 5%;
+    text-align: left; 
+    margin-top: 320px;
+}
+.inner p a:hover{
+    text-shadow: 0px 0px 1px  black;
+    color: red;
+}
+.inner h6{
+  position: absolute;
+    margin-top: 220px;
+    margin-left: 5%;
+    text-align: left;
+    white-space: pre-wrap;
+}
+#controls{
+    margin: -105px 0px 0 88%;/*положение боковой кнопки*/
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: relative;
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+    line-height: 50px;
+    transition:all .7s ease-out;  
+}
+#controls label{
+    transition: all 0.7s ease-out; /* background-color .7s ease-out, color .7s ease-out;*/
+    display: none;
+    width: 50px;
+    height: 50px;
+    opacity: .6;
+    border-radius: 50%;
+    background-image:url(../img/st2.png); /* боковая кнопка навигации*/
+    background-color: #A4A4A4;
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: 100%; 
+}
+#controls label:hover{
+    opacity: 1;
+    color: white;
+    /* боковая кнопка навигации*/
+    background-color: red;
+    transition: all 0.7s ease-out;
+}
+#slide11:checked ~ #controls label:nth-child(2),
+#slide12:checked ~ #controls label:nth-child(3),
+#slide13:checked ~ #controls label:nth-child(4),
+#slide14:checked ~ #controls label:nth-child(1){
+    border: 1px solid white;
+    box-shadow: 0px 0px 1px 1px grey;
+    float: left;
+    margin: 0 0 -50px 0px;
+    display: block;   
+}
+#bullets{
+    position: absolute;
+    margin: -40px 0 0 45%;/*положение нижник кнопок управления*/
+    text-align: center;
+    z-index: 4 ;   
+}
+#bullets label{
+    color: white;
+    text-align: center;
+    line-height: 20px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background: red;/*нижние кнопки*/
+    margin: 10px 5px;
+    z-index: 1;
+}
+#bullets:checked ~ #bullets label:nth-child(1),
+#bullets:checked ~ #bullets label:nth-child(2),
+#bullets:checked ~ #bullets label:nth-child(3),
+#bullets:checked ~ #bullets label:nth-child(4){
+    background-color: white;
+}
+@media screen and (max-width: 500px){
+#slide11:checked ~ #controls label:nth-child(2),
+#slide12:checked ~ #controls label:nth-child(3),
+#slide13:checked ~ #controls label:nth-child(4),
+#slide14:checked ~ #controls label:nth-child(1),
+#slide11:checked ~ #controls label:nth-child(2),
+#slide12:checked ~ #controls label:nth-child(3),
+#slide13:checked ~ #controls label:nth-child(4),
+#slide14:checked ~ #controls label:nth-child(1){margin:0;}
+
+}
+@media screen and (min-width: 600px){
+  #slides .slide{
+    height: 370px;   
+} 
+.inner h6{
+    color: white;
+    text-shadow: 0px 0px 2px  black;
+    font-size: 1.6rem;
+}
+.inner h2{
+  font-size: 3rem;
+  text-shadow: 0px 0px 2px  black;
+  color: white;
+}
+.inner p a{
+  font-size: 1.3rem;
+  color: white;
+  text-shadow: 0px 0px 2px  black;
+}
+  }
+  @media screen and (max-width: 600px){
+    #slides .slide{
+      height: 187px;   
+  }
+  .inner h6{
+    color:gray;
+    text-shadow: none;
+    font-size: 1.3rem;
+} 
+.inner h2{
+  font-size: 2rem;
+  text-shadow: none;
+  color:gray;
+}
+.inner p a{
+  font-size: 1.1rem;
+  color: grey;
+  text-shadow: none;
+}
+    } 
+/* ============= основная часть страницы main ============ */
+/* ============ Блоки мой МТС и пополнение  ===============. */
+main{
+  width: 100%;
+  background-color: #E6E7EF;
+  /*border: 1px solid red;*/
+}
+
+.myMTS_replenish{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content:  space-between;
+  margin-top: 10px;
+  width: 100%;
+  z-index: 30;
+}
+@media screen  and (max-width: 1100px){
+  .myMTS,.replenish{
+    width: 95%; 
+  }
+  .myMTS p{
+      letter-spacing: .7px;
+      font-size: 1.4rem;   
+  }
+}
+@media screen and (min-width: 1100px){
+  .myMTS,.replenish{
+    width: 46.5%; 
+  }
+  .myMTS p{
+    letter-spacing: .7px;
+    font-size: 1.1rem;   
+}
+}
+  .replenish{
+    margin-right: 2.3%;
+  }
+  .myMTS,.replenish{
+    background-color: #FFFFFF;
+    /*height: 270px;*/
+    border-radius: 7px;
+    margin-left: 2.3%;
+    margin-top: 20px;
+    padding-bottom: 15px;
+    
+  }
+  .myMTS:hover,.replenish:hover{
+    box-shadow: 0px 0px 40px 10px #D1D1D1;
+  }
+
+/*. ============ Блок main - Блок Мой МТС  =========================*/
+    .myMTS{
+      background-image: url(../img/mymts.jpeg);
+      background-repeat: no-repeat;
+      background-position: right;
+      background-size: 200px 250px;
+    }
+    .myMTS a{
+      /*position: absolute;*/
+        margin-left: 0px;
+        margin-top: 80px;
+        padding: 17px 32px 17px 32px;
+        border-radius: 6px;
+        letter-spacing: .7px;
+        font-size: 13px;
+        color: white;
+        background-color: #D20011;
+    }
+    .myMTS h3{
+        /*position: absolute;*/
+        margin-left: 30px;
+        margin-top: 20px;
+        color: #262626;
+        letter-spacing: .7px;
+        font-size: 1.5rem;
+        letter-spacing: .7px;
+        text-shadow: 0 0 1px #8B8B8B;
+    }
+    .myMTS p{
+      width: 55%;
+        /*position: absolute;*/
+        margin-left: 30px;
+        margin-top: 50px;
+        color: #262626;
+        letter-spacing: .7px;
+        font-size: 1.1rem;   
+    }
+    /* ============= Блок main раздел - поплнить онлайн =======. */
+    .replenish h3{
+        /*position: absolute;*/
+        text-align: center;
+        margin-top: 20px;
+        color: #262626;
+        letter-spacing: .7px;
+        font-size: 1.5rem;
+        letter-spacing: .7px;
+        text-shadow: 0 0 1px #8B8B8B;
+    }
+    .elem input{
+        opacity: 0;
+        
+      }
+        
+    .elem input:checked+label{
+        color:red;
+        border-bottom: 3px solid red; 
+        }
+    
+
+    .elem label{
+        margin-left: 1%;
+            /*border: 1px solid red;*/ 
+        color: #3B3B3B;
+        font-size: .8rem;
+        padding: 10px 10px 15px 10px;
+        border-bottom: 3px solid white;
+        transition: all .3s ease 0s;
+        }
+    .elem{
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        width: 90%;
+        margin-left: 5%;
+        border-bottom: 1px solid #D4D4D4;
+          
+        }
+    .elem2 input{
+        color: red;
+        }
+    .elem2 input:checked+label{
+        color:red;
+           
+        }
+    .elem2{
+        display: flex;
+        justify-content: center;
+      /*border: 1px solid red;*/
+        margin-top: 20px;
+          /*position: absolute;*/
+        margin-left: 0%; 
+        }
+    .elem2 label{
+        margin-bottom:10px;
+            /*border: 1px solid red;*/
+        color: #3B3B3B;
+        font-size: .9rem;
+        padding: 0px 10px 0px 10px;
+        }
+    .nput_forms_button::placeholder{
+        color: #3B3B3B;
+        background-color: #E0E0E0;
+        }
+    #input10{
+        color: #3B3B3B;
+        background-color: #E0E0E0;
+        width: 6%;
+        text-align: center;
+        }
+    .elem3{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 5px;
+        height: 40px;
+        }
+    .elem3 *:not(:first-child) {
+        margin-right: 5px; 
+        
+    }
+    .nput_forms_button, .nput_forms{
+        font-size: 2rem;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        }
+    #input8{
+        width: 18%;
+        }
+    #input9{
+        width: 30%;
+        }
+    #input7{
+        width: 24%;
+        }
+    .nput_forms:hover{
+        color: white;
+        background-color: red;
+        }
+    a#button_enter{
+      /*position: absolute;*/
+        margin-left: 4px;
+        
+        padding: 14px 3px 2.5px 3px;
+        border-radius: 3px;
+        letter-spacing: .7px;
+        font-size: 13px;
+        color: #3B3B3B;
+        background-color: #E0E0E0;
+        transition: all 0.7s ease-out
+    }
+    a#button_enter:hover{
+        color: white;
+        background-color: #D20011;
+
+    }
+    /*#optional_field{
+      position: absolute;
+      color: #626262;
+      opacity: .5;
+      font-size: .8rem;
+      margin-left: 310px;
+      margin-top: 0px;
+    }*/
+
+    .elem4{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+        width:100%;
+        height: 60px;
+        /*border: 1px solid blue;*/
+        margin-top: 20px;
+        background-image: url(../img/Payment-Methods.png);
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: 40%;
+    }
+    .elem4 a{
+      
+        margin-left: 15px;
+        color: #3B3B3B;
+        font-size: .9rem;
+        transition: all 0.7s ease-out;
+    }
+    .elem4 a:hover{
+        color: #D20011;
+    }
+
+/*. ======================= Полезные сервисы =================== */
+/* стили для всех элементов  блока  "Полезные сервисы" */
+        .useful_services{
+            width: 100%;
+                /*border: 1px solid black;*/
+            margin: 0 auto;
+        }
+        /* изменение (адаптивность) размера всех элементов  которые лежат блока "Полезные сервисы"*/ 
+        @media screen  and (max-width: 800px){
+            .tariffs_servises{
+              width:97%;   
+          }
+            .tariffs3 a{
+              letter-spacing: .6px;
+              font-size: .8rem;    
+        }
+        }
+        @media screen and (min-width: 800px){
+            .tariffs_servises{
+                width:48.5%;   
+          }
+            .tariffs3 a{
+              letter-spacing: .7px;
+              font-size: 1.1rem; 
+        }
+        }
+        /* стили дополнительного блока, который лежит в блоке "Полезные сервисы" 
+         в котором лежат внутренние блоки (бонус, ритейл, финансы и т д)*/
+        .useful{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content:  space-between;
+            width: 100%;
+            /*border: 1px solid red;*/
+            margin-top: 10px; 
+            padding: 2.5%; 
+        }
+
+/* Стили внутренних блоков (ритейл, финансы, бонус и т д)*/
+        .tariffs_servises{
+            flex-wrap: wrap;
+            flex-direction:column;
+            justify-content:  flex-start;
+            align-items: flex-start;
+            /*border: 1px solid red;*/
+            margin-top: 10px;  
+        }
+        /*Стили основного внутреннего текста-ссылки внутри  блоков (финансы, бонус, ритейл и т д)*/
+        .tariffs3:hover{
+            box-shadow: 0px 0px 40px 10px #D1D1D1;
+        }
+        .tariffs3{
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    /*border: 1px solid red;*/
+                    background-repeat: no-repeat;
+                    background-position: right;
+                    background-size:180px 180px;
+                    width: 100%;
+                    height: 180px;
+                    border-radius: 7px;
+                    background-color: #FFFFFF;
+                }
+        /* Стили названий внутренних блоков (бонус, таривы и т д) */
+        .tariffs{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content:  flex-start;
+            align-items: flex-start;
+            /*border: 1px solid red;*/
+        }
+        
+        .tariffs3 a{
+            display: block;
+            transition: all 0.7s ease-out;
+            color: #262626; 
+              /*border: 1px solid red;*/
+            padding: 50px 40% 50px 40px; 
+        }
+
+        .tariffs3 a:hover{
+            color: red;
+        }
+        .tariffs a{
+            color: black;
+            font-weight: bold;
+            transition: all 0.7s ease-out;
+        }
+        a.tariffs1{
+            font-size: 2rem;
+            position:relative;
+            margin-top: 5px;
+            z-index: 1;
+            margin-left: -160px;
+        }
+
+        a.tariffs_tariffs:hover+a.tariffs1, a.tariffs_tariffs:hover+a+a {color: red;}
+        
+        a.tariffs_tariffs{/*скрытая ссылка для подсветки названий блоков*/
+            /*border: 2px solid black;*/
+            display:;
+            width:190px;
+            padding: 10px 0px 10px 20px;
+            transition: all 0.7s ease-out;
+            opacity: 0;
+            z-index: 3;
+        }
+        a.tariffs2{
+            font-size: .4rem;
+            position:relative;
+            margin-left: -20px;
+            z-index: 2;
+        }
+        /*================= блок тарифы ======================= */
+
+        .tariffs9{background-image: url(../img/tariffs_servises.png);}
+
+        /*================= домашний интернет  ======================= */
+        .tariffs4{background-image: url(../img/mtshouse.png);}
+        /*================= Блок финансы  ======================= */
+        .tariffs10{background-image: url(../img/mtsfinance.png);}
+        /*================= Блок Медиа  ======================= */
+        .tariffs6{background-image: url(../img/mtsmedia.png);}
+        /*================= Блок ритейл  ======================= */
+        .tariffs7{background-image: url(../img/mtsritel.png);}
+        /*================= Блок бонус  ======================= */
+        .tariffs8{background-image: url(../img/mtsgifts.png);}
+
+
+
+        /*. ======================= Блок страницы "Полезные ссылки" =================== */
+        .useful_links_header{
+            width: 95%;
+            padding-bottom: 30px;
+            
+            margin-top: 10px; 
+            /*border: 1px solid red;*/
+            margin-left: 2.5%;
+            background-color: #FFFFFF;
+        }
+        .useful_links{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            width: 100%;
+            /*border: 1px solid red;*/
+            margin-top: 20px; 
+            width: 100%;
+            opacity: 1;
+            z-index: 10px;
+        }
+        .useful_links div a{
+            /*border: 1px solid red;*/
+            opacity: 1;
+            padding: 70px 0px 0 0px;
+            display: block;
+            font-size: .9rem;
+            color:#585858;
+            text-align: center;
+            white-space: nowrap;
+        }
+        .useful_links div{
+            margin-left: 3.5%;
+            margin-top: 40px;
+            width: 120px;
+            height: 80px;
+            /*border: 1px solid green;*/ 
+        }
+        #useful_links_top{
+            margin-top: 10px auto;
+            text-align: center;
+            width: 100%;
+            /*border: 1px solid green;*/
+        }
+        #useful_links_top h3,#useful_links_top p{
+            font-size: 1.8rem;
+            letter-spacing: .7px;
+            color: #585858;
+            margin-top: 10px;
+        }
+        #useful_links_top h3{
+            font-size: 1.8rem;
+          
+        }
+        #useful_links_top p{
+            font-size: 1.1rem;
+          
+        }
+        #links1,#links2,#links3,#links4,#links5,#links6,#links7{
+            background-repeat: no-repeat;
+            background-position: top;
+            transition: all 0.7s ease-out;
+        }
+        #links1{
+            background-image: url(../img/eggred.jpeg);
+            background-size: 40%;
+        }
+        #links1:hover{
+            background-image: url(../img/eggblack.jpeg); 
+        }
+        #links2{
+            background-image: url(../img/promotionsred.jpeg);
+            background-size: 40%;
+        }
+        #links2:hover{
+            background-image: url(../img/promotionsblack.jpeg);
+          
+        }
+        #links3{
+            background-image: url(../img/homered.jpeg);
+            background-size: 60%;
+        }
+        #links3:hover{
+            background-image: url(../img/homeblack.jpeg);
+        }
+        #links4{
+            background-image: url(../img/mapred.jpeg);
+            background-size: 55%;
+        }
+        #links4:hover{
+            background-image: url(../img/mapblack.jpeg);
+        }
+        #links5{
+            background-image: url(../img/roumingred.jpeg);
+            background-size: 55%;
+        }
+        #links5:hover{
+            background-image: url(../img/roumingblack.jpeg);
+        }
+        #links6{
+            background-image: url(../img/mobilered.jpeg);
+            background-size: 37%;
+        }
+        #links6:hover{
+            background-image: url(../img/mobileblack.jpeg);
+        }
+        #links7{
+            background-image: url(../img/servicered.jpeg);
+            background-size: 70%;
+        }
+        #links7:hover{
+            background-image: url(../img/serviceblack.jpeg);
+        }
+
+
+/* =================Новости МТС ============================= */
+            .newsBig{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content:  space-between;
+                width: 100%;
+                /*border: 1px solid red;*/
+                margin-top: 20px; 
+                padding: 2.5%; 
+            }
+
+            .news {
+              width: 49%;
+              margin-top: 20px;
+              /*border-radius: 10px;
+              border: 3px solid green;*/
+            }
+
+            @media screen  and (max-width: 800px){
+                .news{
+                  width:100%;   
+            }
+            }
+            @media screen and (min-width: 800px){
+                .news{
+                  width:49%;   
+              }
+            }
+
+            #slideshow , #slideshow2/*окно слайдера*/{
+                position: relative;
+                width: 100%px;
+                height: 260px;
+                padding: 15px;
+                border: 1px solid #ddd;
+                margin: 0 auto;
+                background: #FFF;
+                border-radius: 15px;
+            }
+            /* блок  */
+            #slideshow:before,
+            #slideshow:after, #slideshow2:before,
+            #slideshow2:after{
+                position: absolute;
+                display:block;
+                bottom:16px;
+                width: 50%;
+                height: 20px;
+                content: "";
+                background-repeat: no-repeat;
+                background-position:center;
+                background-size: 100%;
+                border-radius: 50%;
+                box-shadow: 0 0 3px rgba(0,0,0, 0.4), 0 20px 10px rgba(0,0,0, 0.7);
+                z-index: -10;
+            }
+            #slideshow:before, #slideshow2:before{
+                left:0;
+                transform: rotate(-4deg);
+            }
+            #slideshow:after , #slideshow2:after{
+                right:0;
+                transform: rotate(4deg); 
+            }
+            #slideshow .commands, #slideshow2 .commands2{ /*  кнопки сладера*/
+                position: absolute;
+                top: 80%;
+                z-index: 8;
+                margin-left: 80%;/* положение левой кнопки*/
+                padding: 15px 15px;/*размер кнопок*/
+                text-decoration:none;
+                background-color:grey;
+                background-image: url(../img/st2.png);
+                background-repeat: no-repeat;
+                background-position:center;
+                background-size: 100%;
+                border-radius: 50%; 
+                transition: all .7s ease-out;
+                opacity: .6;
+            }
+            #slideshow .commands:hover,#slideshow2 .commands2:hover{opacity: 1;}
+            #slideshow .commands:hover:before, #slideshow2 .commands2:hover:before{opacity: 1;}
+            #slideshow .commands:hover:after, #slideshow2 .commands2:hover:after{opacity: 1;}
+            #slideshow .commands:focus, #slideshow2 .commands2:focus{ 
+                outline: 0;
+                transform: translate(2px, 3px);
+            }
+            #slideshow .commands:active, #slideshow2 .commands2:active{transform: translate(2, 3px);}
+            /* ==========. положение правой кнопки ===== */
+            #slideshow .prev , #slideshow2 .prev{left: -30px;}
+            #slideshow .next, #slideshow2 .next{right: 20px;}
+
+            #slideshow .prev,
+            #slideshow .next,
+            #slideshow2 .prev,
+            #slideshow2 .next{display:none;}
+
+            #slideshow .prev,
+            #slideshow .next, 
+            #slideshow2 .prev,
+            #slideshow2 .next{display:none;}
+
+            #slideshow .commands1,#slideshow2 .commands21 {display: block; }
+
+            #slideshow .container ,#slideshow2 .container2{
+                position:relative;
+                width: 100%;
+                height: 260px;/*внешнее окно слайдера*/
+                overflow: hidden;
+                border-radius: 0px;
+            }
+
+            #slideshow .c_slider , #slideshow2 .c_slider2{/*ручной слайдер*/
+                position: absolute;
+                left:0; top:0;
+                width: 402%;
+                height: 180px;/*внутреннее окно сладера - картинка*/
+                background-repeat: no-repeat;
+                background-position:left;
+            }
+            .sl_i:target ~ #slideshow .c_slider, 
+            .sl_i2:target ~ #slideshow2 .c_slider2{transition: background 1s;}
+            #news_post,#news_post2{
+                position: absolute;
+                font-size: .8rem;
+                letter-spacing: .7px;
+                color: #1C70A7;
+                margin-top: 200px;
+                /*border: 1px solid blue;*/
+                
+                padding: 5px 9px 5px 5px;
+                transition: all 0.7s ease-out;
+            }
+            #news_post:hover, #news_post2:hover{color:#D20011;}
+            /* =======новостной слайдер 1 ==============*/
+            a#post1 {
+                position: absolute;
+                font-size: .8rem;
+                letter-spacing: .7px;
+                color: #1C70A7;
+                margin-top: 200px;
+                white-space: pre-wrap;
+                width: 10%;
+                /*border: 1px solid blue;*/
+                margin-left: .5%;
+                padding: 5px 9px 5px 50px;
+                background-size: 10px 10px;
+                background-position:left;
+                background: url(../img/post3.jpeg) 0 0 no-repeat;
+            }
+            #news_post{margin-left: 12%;}
+
+            #slideshow .c_slider {/*ручной слайдер*/
+                background: url(../img/news6.png) 0 0 no-repeat, url(../img/news7.png) 25% 0 no-repeat, url(../img/news8.png) 50% 0 no-repeat, url(../img/news9.png) 75% 0 no-repeat;
+                background-size: 25%;
+            }
+            .sl_i:target ~ #slideshow .c_slider, .sl_i2:target ~ #slideshow2 .c_slider2{transition: background 1s;}
+
+
+            #sl_i1:target ~ #slideshow .commands                { display: none; }
+            #sl_i1:target ~ #slideshow .commands1               { display: block; }
+            #sl_i1:target ~ #slideshow .c_slider                { background-position: 0 0, 33.333333% 0, 66.666666% 0, 100% 0; }
+
+
+            #sl_i2:target ~ #slideshow .commands                { display: none; }
+            #sl_i2:target ~ #slideshow .commands2               { display: block; }
+            #sl_i2:target ~ #slideshow .c_slider                { background-position: -33.333333% 0, 0 0, 33.333333% 0, 66.666666% 0; }
+
+
+            #sl_i3:target ~ #slideshow .commands                { display: none; }
+            #sl_i3:target ~ #slideshow .commands3               { display: block; }
+            #sl_i3:target ~ #slideshow .c_slider                { background-position: -66.666666% 0, -33.333333% 0, 0 0, 33.333333% 0; }
+
+
+            #sl_i4:target ~ #slideshow .commands                { display: none; }
+            #sl_i4:target ~ #slideshow .commands4               { display: block; }
+            #sl_i4:target ~ #slideshow .c_slider                { background-position: -100% 0, -66.666666% 0, -33.333333% 0, 0 0; }
+
+            /* =======новостной слайдер 2 ==============*/
+
+            #slideshow2 .c_slider2{/*ручной слайдер*/
+              background: url(../img/news2.png) 0 0 no-repeat, url(../img/news3.png) 25% 0 no-repeat, url(../img/news5.png) 50% 0 no-repeat, url(../img/news4.png) 75% 0 no-repeat;
+              background-size: 25%;
+            }
+            #news_post2{
+              margin-left: 9%;
+              width: 10%;
+              white-space: pre-wrap;
+            }
+
+            .sl_i:target ~ #slideshow .c_slider, 
+            .sl_i2:target ~ #slideshow2 .c_slider2{transition: background 1s;}
+
+
+
+            #sl_i21:target ~ #slideshow2 .commands2                { display: none; }
+            #sl_i21:target ~ #slideshow2 .commands21               { display: block; }
+            #sl_i21:target ~ #slideshow2 .c_slider2                { background-position: 0 0, 33.33333333% 0, 66.66666666% 0, 100% 0; }
+
+
+            #sl_i22:target ~ #slideshow2 .commands2                { display: none; }
+            #sl_i22:target ~ #slideshow2 .commands22               { display: block; }
+            #sl_i22:target ~ #slideshow2 .c_slider2                { background-position: -33.33333333% 0, 0 0, 33.33333333% 0, 66.66666666% 0; }
+
+
+            #sl_i23:target ~ #slideshow2 .commands2                { display: none; }
+            #sl_i23:target ~ #slideshow2 .commands23               { display: block; }
+            #sl_i23:target ~ #slideshow2 .c_slider2                { background-position: -66.66666666% 0, -66.66666666% 0, 0 0, 33.33333333% 0; }
+
+
+            #sl_i24:target ~ #slideshow2 .commands2                { display: none; }
+            #sl_i24:target ~ #slideshow2 .commands24               { display: block; }
+            #sl_i24:target ~ #slideshow2 .c_slider2                { background-position: -100% 0, -66.66666666% 0, -33.33333333% 0, 0 0; }
+
+/*  =========  footer ================= */
+footer{
+    background-color: #EBECF3;
+    width: 100%;
+}
+/*  =========  footer top верхняя часть футера ================= */
+    .footer_top{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border-top: 1px solid gray;
+    }
+    .footer_top_left{width: 60%;}
+
+    .footer_top_left h3{
+        color: black;
+        letter-spacing: .7px;
+        font-size: 1.1rem;
+        margin-top: 25px;
+        margin-left: 40px; 
+    }
+    .footer_top_left p{
+        color: black;
+        letter-spacing: .7px;
+        font-size: .9rem;
+        margin-top: 20px;
+        margin-left: 40px;
+        width: 80%;
+    }
+    .footer_top_right{
+        width: 39%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .footer_top_right ul{
+        letter-spacing: .7px;
+        font-size: .8rem;
+        margin-top: 20px;
+        margin-left: 20%;
+        line-height: 40px;
+        list-style-type: none;
+    }
+    .footer_top_right ul a{
+        color: #7E7F7E;
+        transition: all 0.7s ease-out;
+    }
+    .footer_top_right ul a:hover{
+        color: red;
+        transition: all 0.7s ease-out;
+      }
+/*  =========  footer bottom средняя часть футера ================= */
+        .footer_bottom{
+            width: 100%;
+            border-top: 1px solid gray;
+        }
+        #footer_bottom_up{
+            width: 100%;
+            /*border: 3px solid green;*/
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+        }
+
+        @media screen and (max-width: 600px){
+          .footer_bottom_parent{
+              width:96%;   
+          } 
+          #footer_bottom_up_right{
+              width:96%;
+          }  
+        }
+        @media screen and (min-width: 800px) and (max-width: 1100px){
+          #footer_bottom_up_left{
+              width:96%;   
+          }
+          #footer_bottom_up_center{
+              width:96%;
+          } 
+          .footer_bottom_parent{
+            width:58%;   
+        } 
+        #footer_bottom_up_right{
+            width:42%;
+        }   
+        }
+        @media screen and (min-width: 1100px){
+          #footer_bottom_up_left{
+              width:40%;   
+          }
+          #footer_bottom_up_center{
+              width:60%;
+          } 
+          .footer_bottom_parent{
+              width:58%;   
+        } 
+          #footer_bottom_up_right{
+              width:42%;
+        }   
+        }
+
+/*=======левая часть среднего раздела футера=====*/
+            .footer_bottom_parent{
+                /*border: 1px solid red;*/
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+            }
+            
+
+            #footer_bottom_up_left p{
+                margin-top: 20px;
+                margin-left: 8%;
+                /*border: 1px solid black;*/
+                color:black;
+                letter-spacing: .7px;
+                font-size: .9rem;
+            }
+            div#footer_bottom_span{
+                margin-top: 30px;
+                /*border: 1px solid blue;*/
+                margin-left: 4%;
+                width: 90%; 
+            }
+
+            #footer_bottom_up_left a{
+                background-repeat: no-repeat;
+                background-position:center;
+                background-size: cover;
+                border-radius: 50%;
+                /*border: 1px solid red;*/
+                display: blok;
+                padding: 10px 18px 10px 18px;
+                margin-left: 5px;
+                transition: all 0.7s ease-out;
+            }
+            #instagram{
+                background-image: url(../img/instagram.jpeg);
+                color:white;
+            }
+            #instagram:hover{
+                background-image: url(../img/instagramcolor.jpeg);
+            }
+            #face{
+                background-image: url(../img/f.jpeg);
+            }
+            #face:hover{
+                background-image: url(../img/fcolor.jpeg);
+            }
+            #twitter{
+                background-image: url(../img/twitter.jpeg);
+            }
+            #twitter:hover{
+                background-image: url(../img/twittercolor.jpeg);
+            }
+            #vk{
+                background-image: url(../img/vk.jpeg);
+            }
+            #vk:hover{
+                background-image: url(../img/vkcolor.jpeg);
+            }
+            #scool{
+                background-image: url(../img/scool.jpeg);
+            }
+            #scool:hover{
+                background-image: url(../img/scoolcolor.jpeg);
+            }
+            #telegram{
+                background-image: url(../img/telegram.jpeg);
+            }
+            #telegram:hover{
+                background-image: url(../img/telegramcolor.jpeg);
+            }
+/*=========центральня часть стреднего раздела футера=======*/
+            #footer_bottom_up_center{
+                /*border: 1px solid blue;*/
+                padding-left: 6%;
+            }
+            #footer_bottom_up_center a{
+                margin-top: 20px;
+                background-repeat: no-repeat;
+                background-position:center;
+                background-size: 95%;
+                border-radius: 7px;
+                border: 1px solid grey;
+                display: blok;
+                padding: 9px 52px 9px 52px;
+                margin-left: 5px; 
+            }
+            #footer_bottom_up_center p{
+                margin-top: 20px;
+                margin-bottom: 30px;
+                color:black;
+                letter-spacing: .7px;
+                font-size: .9rem;
+                margin-left: 3%;
+            }
+            #appleStore{
+                background-image: url(../img/applestore.jpeg);
+                color:white;
+            }
+            #appleStore,#appGallery,#googlePlay{
+                background-repeat: no-repeat;
+                background-position:center;
+                background-size: cover;
+            }
+            #appleStore:hover,#appGallery:hover,#googlePlay:hover{
+                cursor: pointer;
+            }
+            #googlePlay{
+                background-image: url(../img/googleplay.jpeg);
+            }
+
+            #appGallery{
+                background-image: url(../img/appgallery.jpeg);
+            }
+            /*=========правая часть  среднего раздела футера=======*/
+            
+            .footer_bottom_up_right_ul{
+                color: #7E7F7E;
+                width: 97%;
+                /*border: 1px solid green;*/
+                display: flex;
+                margin-left: 3%;
+                margin-top: 20px;
+                flex-wrap: wrap;
+            }
+            #footer_bottom_up_right a{
+                color: #7E7F7E;
+                letter-spacing: .7px;
+                font-size: .8rem;
+                transition: all 0.7s ease-out;
+            }
+            #footer_bottom_up_right a:hover{
+                color:red;
+            }
+            .footer_bottom_up_right_ul {
+                float: left;
+                /*border: 1px solid black;*/
+            }
+            .footer_bottom_up_right_ul li:first-child{
+                list-style-type: none;
+            }
+            .footer_bottom_up_right_ul li{
+                width: 33%;
+                /*border: 1px solid red;*/
+            }
+          /*========= нижняя часть нижнего раздела футера=======*/
+                #footer_bottom_down p{
+                    text-align: left;
+                    margin: 40px 0px 40px 3%;
+                    color: #7E7F7E;
+                    letter-spacing: .7px;
+                    font-size: .8rem;
+                    width: 60%;
+                    white-space: pre-wrap;
+                    padding-top: 10px;
+                }
+                #footer_bottom_down{
+                    width: 100%;
+                    height: 40px;
+                    margin-top: 50px;
+                    background-image: url(../img/bank.jpeg);
+                    background-repeat: no-repeat;
+                    background-position:right;
+                    background-size: 25%;
+                    /*border: 1px solid red;*/
+                }

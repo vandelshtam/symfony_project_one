@@ -1,0 +1,548 @@
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pricing</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown link
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- ===========  Верхник блок страницы, меню и субменю ================== -->
+    <header >
+         <!-- ===== меню для мобильного вида =====--> 
+        <div id="menuMobile"><!-- это мобильный вид меню появляющийся в верхней части страницы сайта при ширине  страницы меньше 1030px-->
+            <div id="menuMobile_logo"></div>
+            <div id="menuMobile_button"><a href="#menuMobile_right"></a><!--<div><span></span><span></span><span></span></div>--></div>
+        </div>
+            <div id="menuMobileHight">
+                        <div id="menuMobile_right" id="menuMobile_right1"><!--Этот блок меню всплывет при нажатии кнопки в строке мобильного вида меню-->
+                                <span id="Personal_Area"><a href="#" >Вход в личный кабинет</a></span><a href="#menuMobile_right1" id="menuMobile_right2">X</a>
+                                <div class="topLinksMobile"><!-- Раздел для клиентов и бизнеса в мобильном меню-->
+                                    <ul>
+                                        <li><a href="#" id="clientMobile">Частным клиентам</a></li>
+                                        <li><a href="#">Бизнесу</a></li>
+                                        <li><a href="#">О компании</a></li>
+                                    </ul>
+                                </div>
+                        <div id="menuMobileSearch">
+                                <div class="searchMobile"><a href="#" id="searchMobile">Поиск</a></div><!--Раздел поиск по сайту-->
+                        </div>
+            <!-- Блок внутренее Субменю-->
+                        <div class="page_subMenu_links_Mobile"> <!--  разделы мобильного  субменю - связь, финансыБ интернет и т д-->
+                                    <div  class="menubottomMobile"><a href="#" id="connectbottonMobile" class="menubottonMobile">Связь</a> <div class="triangleMobile"></div>
+                                    <div class="connectMobile" id="connectMobile" >
+                                        <ul class="ulMobile">
+                                            <li class="ccc"><a href="#">Мобильная связь</a><span class="triangleMobileUl"></span></li>
+                                            <li><a href="#">Тарифы</a></li>
+                                            <li><a href="#">Акции и бонусы</a></li>
+                                            <li><a href="#">Дополнительные услуги</a></li>
+                                        </ul>
+                                        <ul class="ulMobile">
+                                            <li><a href="#">Мобильный интернет</a><span class="triangleMobileUl"></span></li>
+                                            <li><a href="#">Открытый интернет</a></li>
+                                            <li><a href="#">Безлимиты</a></li>
+                                            <li><a href="#">Дополнительные услуги</a></li>
+                                            <li><a href="#">Акции</a></li>
+                                        </ul>
+                                        <ul class="ulMobile">
+                                            <li><a href="#">Роуминг и звонки за границу</a><span class="triangleMobileUl"></span></li>
+                                            <li><a href="#">тарифы в роуминге</a></li>
+                                            <li><a href="#">Интернет в роуминге</a></li>
+                                            <li><a href="#">СМС в роуминге</a></li>
+                                        </ul> 
+                                        <ul class="ulMobile">
+                                            <li><a href="#">Домашний интернет и ТВ</a><span class="triangleMobileUl"></span></li>
+                                            <li><a href="#">Услуги</a></li>
+                                            <li><a href="#">Карта покрытия</a></li>
+                                            <li><a href="#">Архив услуг и акций</a></li>
+                                            
+                                        </ul>
+                                        <ul class="ulMobile">
+                                            <li><a href="#">Все услуги</a><span class="triangleMobileUl"></span></li>
+                                            <li><a href="#">Контроль расходов</a></li>
+                                            <li><a href="#">Возможности при нуле</a></li>
+                                            <li><a href="#">Управление звонками</a></li>
+                                            <li><a href="#">Управление сообщениями</a></li>
+                                            <li><a href="#">Подключение TWIN-Карты</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div  class="menubottomMobile"><a href="#" id="financebottonMobile" class="menubottonMobile">Финансы</a> <div class="triangleMobile"></div>
+                                    <div class="financeMobile" id="financeMobile" >
+                                        <ul class="ulMobile">
+                                            <li class="ccc"><a href="#">МТС Деньги</a><span class="triangleMobileUl"></span></li>
+                                            <li><a href="#">Ктно ТВ</a></li>
+                                            <li><a href="#">Музыка</a></li>
+                                            <li><a href="#">Книги и пресса</a></li>
+                                        </ul>
+                                        <ul class="ulMobile">
+                                            <li><a href="#">Карта МТС Деньги</a><span class="triangleMobileUl"></span></li>
+                                            <li><a href="#">МТС ГЕО</a></li>
+                                            <li><a href="#">МТС Образование</a></li>
+                                            <li><a href="#">Здоровье</a></li>
+                                            <li><a href="#">Сервисы вашего города</a></li>
+                                            <li><a href="#">Покупки</a></li>
+                                            <li><a href="#">Объявления и реклама</a></li>
+                                            <li><a href="#">Тарифы на услуги</a></li>
+                                            li><a href="#">Мобильные вакансии</a></li>
+                                        </ul>
+                                        <ul class="ulMobile">
+                                            <li><a href="#">Услуги и сервисы</a><span class="triangleMobileUl"></span></li>
+                                            <li><a href="#">Пополнить счет банковской картой</a></li>
+                                            <li><a href="#">Система I-Pay</a></li>
+                                            <li><a href="#">Переводы с карты на карту</a></li>
+                                        </ul> 
+                                    </div>
+                                </div>
+                                <div  class="menubottomMobile"><a href="#serviceMobile" id="servicebottonMobile" class="menubottonMobile">Сервисы для жизни</a> <div class="triangleMobile"></div>
+                                    <div class="serviceMobile" id="serviceMobile" >
+                                        <ul class="ulMobile">
+                                            <li class="ccc"><a href="#">МТС Медиа</a><span class="triangleMobileUl"></span></li>
+                                            <li><a href="#">Ктно ТВ</a></li>
+                                            <li><a href="#">Музыка</a></li>
+                                            <li><a href="#">Книги и пресса</a></li>
+                                        </ul>
+                                        <ul class="ulMobile">
+                                            <li><a href="#">Полезное</a><span class="triangleMobileUl"></span></li>
+                                            <li><a href="#">МТС ГЕО</a></li>
+                                            <li><a href="#">МТС Образование</a></li>
+                                            <li><a href="#">Здоровье</a></li>
+                                            <li><a href="#">Сервисы вашего города</a></li>
+                                            <li><a href="#">Покупки</a></li>
+                                            <li><a href="#">Объявления и реклама</a></li>
+                                            <li><a href="#">Тарифы на услуги</a></li>
+                                            <li><a href="#">Мобильные вакансии</a></li>
+                                        </ul>
+                                        <ul class="ulMobile">
+                                            <li><a href="#">Развлечения</a><span class="triangleMobileUl"></span></li>
+                                            <li><a href="#">Знакомства</a></li>
+                                            <li><a href="#">Развлечения</a></li>
+                                            <li><a href="#">Общение</a></li>
+                                        </ul> 
+                                        <ul class="ulMobile">
+                                            <li><a href="#">Безопасность</a><span class="triangleMobileUl"></span></li>
+                                            <li><a href="#">Защита телефона</a></li>
+                                            <li><a href="#">Антивирусное ПО</a></li>
+                                            <li><a href="#">Управление системой охраны</a></li>
+                                            
+                                        </ul>
+                                        <ul class="ulMobile">
+                                            <li><a href="#">Приложения МТС</a><span class="triangleMobileUl"></span></li>
+                                            <li><a href="#">Мой МТС </a></li>
+                                            <li><a href="#">МТС ТВ</a></li>
+                                            <li><a href="#">МТС Кино</a></li>
+                                            <li><a href="#">IVI</a></li>
+                                            <li><a href="#">МТС Деньги</a></li>
+                                            <li><a href="#">МТС Пресса</a></li>
+                                            <li><a href="#">МТС Music</a></li>
+                                            <li><a href="#">МТС Дневник</a></li>
+                                            <li><a href="#">Все приложения</a></li>
+                                        </ul>
+                                    </div>
+                            
+                            </div>
+                                <div  class="menubottomMobile"><a href=" #internetMobile"  id="internetbottonMobile" class="menubottonMobile">Интернет-магазин</a><div class="triangleMobile"></div>
+                                    <div class="internetMobile" id="internetMobile">
+                                        <ul class="ulMobile">
+                                            <li><a href="#">Смартфоны</a><span class="triangleMobileUl"></span></li>
+                                            <li><a href="#">Apple</a></li>
+                                            <li><a href="#">Samsung</a></li>  
+                                            <li><a href="#">Xiaomi</a></li>    
+                                            <li><a href="#">Huawei</a></li>  
+                                            <li><a href="#">Honor</a></li>  
+                                        </ul>
+                                        <ul class="ulMobile">
+                                            <li><a href="#">Гаджеты</a><span class="triangleMobileUl"></span></li>
+                                            <li><a href="#">Компьютеры и планшеты</a></li>
+                                            <li><a href="#">Умные часы и фитнес-браслеты</a></li>
+                                            <li><a href="#">3G-,4G-модемы и роутеры </a></li>
+                                            
+                                        </ul>
+                                        <ul class="ulMobile">
+                                            <li><a href="#">Аксессуары</a><span class="triangleMobileUl"></span></li>
+                                            <li><a href="#">Стекла и пленки</a></li>
+                                            <li><a href="#">Чехлы</a></li>
+                                            <li><a href="#">Сетевые зарядные устройства</a></li>
+                                            <li><a href="#">Автомобильные зарядные устройства</a></li>
+                                            <li><a href="#">Кабели</a></li>
+                                            <li><a href="#">Карты памяти</a></li>
+                                            <li><a href="#">Наушники</a></li>
+                                            <li><a href="#">Портативные аккумуляторы</a></li>
+                                            
+                                        </ul> 
+                                        <ul class="ulMobile">
+                                            <li><a href="#">Услуги</a><span class="triangleMobileUl"></span></li>
+                                            <li><a href="#">Страхование портативных устройств "Мобильная защита"</a></li>
+                                            <li><a href="#">Услуги по настройке</a></li>
+                                            <li><a href="#">Трйд-ин в МТС</a></li>
+                                            <li><a href="#">Антивирус и другое ПО</a></li>
+                                        </ul>
+                                        <ul class="ulMobile">
+                                            <li><a href="#">Акции</a><span class="triangleMobileUl"></span></li>
+                                            <li><a href="#">Отличная пара! </a></li>
+                                            <li><a href="#">Время покупать!</a></li>
+                                            <li><a href="#">Вам бонус!</a></li>
+                                            <li><a href="#">Всё и сразу!</a></li>
+                                            <li><a href="#">Ещё выгоднее</a></li>
+                                            <li><a href="#">Забота о близких</a></li>
+                                            <li><a href="#">Удачная покупка</a></li>
+                                            <li><a href="#">Выгодный трейд-ин</a></li>
+                                            <li><a href="#">Все акции</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div  class="menubottomMobile"><a href="#" id="helpbottonMobile" class="menubottonMobile">Помощь</a><div class="triangleMobile"></div>
+                                    <div class="helpMobile" id="halpMobile">
+                                        <ul class="ulMobile">
+                                            <li><a href="#">Смартфоны</a><span class="triangleMobile"></span></li>
+                                            <li><a href="#">Apple</a></li>
+                                            <li><a href="#">Samsung</a></li>
+                                            <li><a href="#">Xiaomi</a></li>
+                                            <li><a href="#">Huawei</a></li>
+                                            <li><a href="#">Honor</a></li>
+                                        </ul>
+                                        <ul class="ulMobile">
+                                            <li><a href="#">Гаджеты</a><span class="triangleMobile"></span></li>
+                                            <li><a href="#">Компьютеры и планшеты</a></li>
+                                            <li><a href="#">Умные часы и фитнес-браслеты</a></li>
+                                            <li><a href="#">3G-,4G-модемы и роутеры </a></li>
+                                            
+                                        </ul>
+                                        <ul class="ulMobile">
+                                            <li><a href="#">Аксессуары</a><span class="triangleMobile"></span></li>
+                                            <li><a href="#">Стекла и пленки</a></li>
+                                            <li><a href="#">Чехлы</a></li>
+                                            <li><a href="#">Сетевые зарядные устройства</a></li>
+                                            <li><a href="#">Автомобильные зарядные устройства</a></li>
+                                            <li><a href="#">Кабели</a></li>
+                                            <li><a href="#">Карты памяти</a></li>
+                                            <li><a href="#">Наушники</a></li>
+                                            <li><a href="#">Портативные аккумуляторы</a></li>
+                                            
+                                        </ul> 
+                                        <ul class="ulMobile">
+                                            <li><a href="#">Услуги</a><span class="triangleMobile"></span></li>
+                                            <li><a href="#">Страхование портативных устройств "Мобильная защита"</a></li>
+                                            <li><a href="#">Услуги по настройке</a></li>
+                                            <li><a href="#">Трйд-ин в МТС</a></li>
+                                            <li><a href="#">Антивирус и другое ПО</a></li>
+                                        </ul>
+                                        <ul class="ulMobile">
+                                            <li><a href="#">Акции</a><span class="triangleMobile"></span></li>
+                                            <li><a href="#">Отличная пара! </a></li>
+                                            <li><a href="#">Время покупать!</a></li>
+                                            <li><a href="#">Вам бонус!</a></li>
+                                            <li><a href="#">Всё и сразу!</a></li>
+                                            <li><a href="#">Ещё выгоднее</a></li>
+                                            <li><a href="#">Забота о близких</a></li>
+                                            <li><a href="#">Удачная покупка</a></li>
+                                            <li><a href="#">Выгодный трейд-ин</a></li>
+                                            <li><a href="#">Все акции</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+            
+        
+        
+                    </div>
+                    <div id="menuMobileBottom">
+                        <a href="#" id="support">Поддержка</a>
+                        <a href="#" id="othrServiceMobile">Все сервисы</a>
+                        <a href="#" id="cashmobile">Пополнение и оплата</a>
+                                <div class="topToggleMobile">
+                                    <span><a href="#">BE</a></span>
+                                    <span><a href="#">EN</a></span>
+                                    <span id="eyeMobile"><a href="#">EYE</a></span>
+                                </div> 
+                    </div>   
+                </div>
+            </div>
+
+
+        <!--====== Меню для desktop устройств-=========-->
+         <div class="pageMenu">
+           <div class="menu"> <!--Верхняя часть меню -->
+                <div class="menuTop">
+                      <div class="containerTop">
+                            <div class="blockTop">
+                                  <div class="topLinks">
+                                       <ul>
+                                            <li><a href="#" id="client">Частным клиентам</a></li>
+                                            <li><a href="#">Бизнесу</a></li>
+                                            <li><a href="#">О компании</a></li>
+                                       </ul>
+                                  </div>
+                                  <div class="topToggle">
+                                        <span><a href="#">BE</a></span>
+                                        <span><a href="#">EN</a></span>
+                                        <span id="eye"><a href="#">EYE</a></span>
+                                  </div>
+                                  <div class="topsysLinks"><a href="#">Пополнение и оплата</a></div>
+                            </div>
+                      </div>
+                </div>
+             
+           </div>
+           <nav class="subMenu">  <!-- Нижняя часть меню -->
+                 <div class="page_subMenu">
+                       <div class="page_subMenu_box">
+                             <span class="page_subMenu_logo"></span><!-- Логотип -->
+                             <div class="page_subMenu_links"> <!-- основное нижнее  меню -->
+                                   <div class="menubottom" ><a href="#" id="conectionbotton" class="menubotton">Связь</a><span class="triangle"></span>
+                                        <div class="conection">
+                                          <ul>
+                                             <li><a href="#">Мобильная связь</a></li>
+                                             <li><a href="#">Тарифы</a></li>
+                                             <li><a href="#">Акции и бонусы</a></li>
+                                             <li><a href="#">Дополнительные услуги</a></li>
+                                             <li><a href="#">Перейти со своим номером</a></li>
+                                          </ul>
+                                          <ul>
+                                             <li><a href="#">Мобильный интернет</a></li>
+                                             <li><a href="#">Открытый интернет</a></li>
+                                             <li><a href="#">Безлимиты</a></li>
+                                             <li><a href="#">Дополнительные услуги</a></li>
+                                             <li><a href="#">Акции</a></li>
+                                          </ul>
+                                          <ul>
+                                             <li><a href="#">Роуминг и звонки за границу</a></li>
+                                             <li><a href="#">Тарифы в роуминге</a></li>
+                                             <li><a href="#">Интернет в роуминге</a></li>
+                                             <li><a href="#">SMS-роуминг</a></li>
+                                             <li><a href="#">Звонки за границу</a></li>
+                                          </ul>
+                                          <ul>
+                                             <li><a href="#">Домашний интернет и ТВ</a></li>
+                                             <li><a href="#">Услуги</a></li>
+                                             <li><a href="#">Акции</a></li>
+                                             <li><a href="#">Карта покрытия</a></li>
+                                             <li><a href="#">Архив услуг и акций</a></li>
+                                          </ul>
+                                          <ul>
+                                             <li><a href="#">Все услуги</a></li>
+                                             <li><a href="#">Контроль расходов</a></li>
+                                             <li><a href="#">Возможности при нуле</a></li>
+                                             <li><a href="#">Управление звноками</a></li>
+                                             <li><a href="#">Управление сообщениями</a></li>
+                                             <li><a href="#">Подключение TWIN-карты</a></li>
+                                          </ul>
+                                        </div>
+                                   </div>
+                                   <div class="menubottom"><a href="#" id="financebotton" class="menubotton">Финансы</a><div class="triangle"></div>
+                                        <div class="finance">
+                                             <ul >
+                                                 <li><a href="#">МТС Деньги</a></li>
+                                             </ul>
+                                             <ul>
+                                                 <li><a href="#">Карта МТС Деньги</a></li>
+                                             </ul>
+                                             <ul>
+                                                 <li><a href="#">Услуги и сервисы</a></li>
+                                                 <li><a href="#">Поплнить счет МТС банковской картой</a></li>
+                                                 <li><a href="#">Система iPay</a></li>
+                                                 <li><a href="#">Переводы с карты на карту</a></li>
+                                             </ul>
+                                        </div>
+                                   </div> 
+                                   <div  class="menubottom"><a href="#" id="servicebotton" class="menubotton">Сервисы для жизни</a><div class="triangle"></div>
+                                       <div class="service">
+                                           <ul >
+                                                 <li><a href="#">МТС Медиа</a></li>
+                                                 <li><a href="#">Ктно ТВ</a></li>
+                                                 <li><a href="#">Музыка</a></li>
+                                                 <li><a href="#">Книги и пресса</a></li>
+                                             </ul>
+                                             <ul>
+                                                 <li><a href="#">Полезное</a></li>
+                                                 <li><a href="#">МТС ГЕО</a></li>
+                                                 <li><a href="#">МТС Образование</a></li>
+                                                 <li><a href="#">Здоровье</a></li>
+                                                 <li><a href="#">Сервисы вашего города</a></li>
+                                                 <li><a href="#">Покупки</a></li>
+                                                 <li><a href="#">Объявления и реклама</a></li>
+                                                 <li><a href="#">Тарифы на услуги</a></li>
+                                                 <li><a href="#">Мобильные вакансии</a></li>
+                                             </ul>
+                                             <ul>
+                                                 <li><a href="#">Развлечения</a></li>
+                                                 <li><a href="#">Знакомства</a></li>
+                                                 <li><a href="#">Развлечения</a></li>
+                                                 <li><a href="#">Общение</a></li>
+                                             </ul> 
+                                             <ul>
+                                                 <li><a href="#">Безопасность</a></li>
+                                                 <li><a href="#">Защита телефона</a></li>
+                                                 <li><a href="#">Антивирусное ПО</a></li>
+                                                 <li><a href="#">Управление системой охраны</a></li>
+                                                 
+                                             </ul>
+                                             <ul>
+                                                 <li><a href="#">Приложения МТС</a></li>
+                                                 <li><a href="#">Мой МТС </a></li>
+                                                 <li><a href="#">МТС ТВ</a></li>
+                                                 <li><a href="#">МТС Кино</a></li>
+                                                 <li><a href="#">IVI</a></li>
+                                                 <li><a href="#">МТС Деньги</a></li>
+                                                 <li><a href="#">МТС Пресса</a></li>
+                                                 <li><a href="#">МТС Music</a></li>
+                                                 <li><a href="#">МТС Дневник</a></li>
+                                                 <li><a href="#">Все приложения</a></li>
+                                             </ul>
+                                       </div>
+                                   </div>
+                                   <div  class="menubottom"><a href="#" id="internetbotton" class="menubotton">Интернет-магазин</a><div class="triangle"></div>
+                                        <div class="internet">
+                                           <ul >
+                                                 <li><a href="#">Смартфоны</a></li>
+                                                 <li><a href="#">Apple</a></li>
+                                                 <li><a href="#">Samsung</a></li>
+                                                 <li><a href="#">Xiaomi</a></li>
+                                                 <li><a href="#">Huawei</a></li>
+                                                 <li><a href="#">Honor</a></li>
+                                             </ul>
+                                             <ul>
+                                                 <li><a href="#">Гаджеты</a></li>
+                                                 <li><a href="#">Компьютеры и планшеты</a></li>
+                                                 <li><a href="#">Умные часы и фитнес-браслеты</a></li>
+                                                 <li><a href="#">3G-,4G-модемы и роутеры </a></li>
+                                                 
+                                             </ul>
+                                             <ul>
+                                                 <li><a href="#">Аксессуары</a></li>
+                                                 <li><a href="#">Стекла и пленки</a></li>
+                                                 <li><a href="#">Чехлы</a></li>
+                                                 <li><a href="#">Сетевые зарядные устройства</a></li>
+                                                 <li><a href="#">Автомобильные зарядные устройства</a></li>
+                                                 <li><a href="#">Кабели</a></li>
+                                                 <li><a href="#">Карты памяти</a></li>
+                                                 <li><a href="#">Наушники</a></li>
+                                                 <li><a href="#">Портативные аккумуляторы</a></li>
+                                                 
+                                             </ul> 
+                                             <ul>
+                                                 <li><a href="#">Услуги</a></li>
+                                                 <li><a href="#">Страхование портативных устройств "Мобильная защита"</a></li>
+                                                 <li><a href="#">Услуги по настройке</a></li>
+                                                 <li><a href="#">Трйд-ин в МТС</a></li>
+                                                 <li><a href="#">Антивирус и другое ПО</a></li>
+                                             </ul>
+                                             <ul>
+                                                 <li><a href="#">Акции</a></li>
+                                                 <li><a href="#">Отличная пара! </a></li>
+                                                 <li><a href="#">Время покупать!</a></li>
+                                                 <li><a href="#">Вам бонус!</a></li>
+                                                 <li><a href="#">Всё и сразу!</a></li>
+                                                 <li><a href="#">Ещё выгоднее</a></li>
+                                                 <li><a href="#">Забота о близких</a></li>
+                                                 <li><a href="#">Удачная покупка</a></li>
+                                                 <li><a href="#">Выгодный трейд-ин</a></li>
+                                                 <li><a href="#">Все акции</a></li>
+                                             </ul>
+                                       </div>
+                                   </div>
+                                   <div  class="menubottom"><a href="#" id="helpbotton" class="menubotton">Помощь</a><div class="triangle"></div>
+                                        <div class="help">
+                                           <ul >
+                                                 <li><a href="#">Смартфоны</a></li>
+                                                 <li><a href="#">Apple</a></li>
+                                                 <li><a href="#">Samsung</a></li>
+                                                 <li><a href="#">Xiaomi</a></li>
+                                                 <li><a href="#">Huawei</a></li>
+                                                 <li><a href="#">Honor</a></li>
+                                             </ul>
+                                             <ul>
+                                                 <li><a href="#">Гаджеты</a></li>
+                                                 <li><a href="#">Компьютеры и планшеты</a></li>
+                                                 <li><a href="#">Умные часы и фитнес-браслеты</a></li>
+                                                 <li><a href="#">3G-,4G-модемы и роутеры </a></li>
+                                                 
+                                             </ul>
+                                             <ul>
+                                                 <li><a href="#">Аксессуары</a></li>
+                                                 <li><a href="#">Стекла и пленки</a></li>
+                                                 <li><a href="#">Чехлы</a></li>
+                                                 <li><a href="#">Сетевые зарядные устройства</a></li>
+                                                 <li><a href="#">Автомобильные зарядные устройства</a></li>
+                                                 <li><a href="#">Кабели</a></li>
+                                                 <li><a href="#">Карты памяти</a></li>
+                                                 <li><a href="#">Наушники</a></li>
+                                                 <li><a href="#">Портативные аккумуляторы</a></li>
+                                                 
+                                             </ul> 
+                                             <ul>
+                                                 <li><a href="#">Услуги</a></li>
+                                                 <li><a href="#">Страхование портативных устройств "Мобильная защита"</a></li>
+                                                 <li><a href="#">Услуги по настройке</a></li>
+                                                 <li><a href="#">Трйд-ин в МТС</a></li>
+                                                 <li><a href="#">Антивирус и другое ПО</a></li>
+                                             </ul>
+                                             <ul>
+                                                 <li><a href="#">Акции</a></li>
+                                                 <li><a href="#">Отличная пара! </a></li>
+                                                 <li><a href="#">Время покупать!</a></li>
+                                                 <li><a href="#">Вам бонус!</a></li>
+                                                 <li><a href="#">Всё и сразу!</a></li>
+                                                 <li><a href="#">Ещё выгоднее</a></li>
+                                                 <li><a href="#">Забота о близких</a></li>
+                                                 <li><a href="#">Удачная покупка</a></li>
+                                                 <li><a href="#">Выгодный трейд-ин</a></li>
+                                                 <li><a href="#">Все акции</a></li>
+                                             </ul>
+                                       </div>
+                                   </div>
+                                   
+                             </div>
+                             
+                             <div class="page_subMenu_enter"> <!-- Правая часть нижнего  меню " вход, корзина, другие сервисы"-->
+                                <div class="search"><a href="#" id="search">Поиск</a></div>
+                                   <a href="#" class="basket"></a>
+                                   <div class="other"><a href="#" id="otherbotton"></a><div id="other1"><b>... ... ...</b></div>
+                                       <div class="menuother">
+                                        <span><a href="#"> МТС ТВ</a></span>
+                                        <span><a href="#"> Мой МТС</a></span>
+                                        <span><a href="#"> МТС Деньги</a></span>
+                                        <span><a href="#"> МТС Music</a></span>
+                                        <span><a href="#"> МТС Дневник</a></span>
+                                        <span><a href="#"> МТС IVI</a></span>
+                                        <span><a href="#"> МТС Пресса</a></span>
+                                        <span><a href="#"> Знакомства с МТС</a></span>
+                                        <span><a href="#"> Семья здесь</a></span>
+                                        <span><a href="#"> Fitness club</a></span>
+                                        <span><a href="#"> Kids club</a></span>
+                                        <span><a href="#"> МТС киоск</a></span>
+                                        <span><a href="#"> МТС Engster</a></span>
+                                        <span><a href="#"> МТС Книги</a></span>
+                                        <span><a href="#"> Дзённik</a></span>
+                                             
+                                       </div>
+                                   </div>
+                                   <div class="enter"><a href="#"> Войти</a></div>
+                             </div>
+                       </div>
+                 </div>
+           </nav>
+        </div>
+     </header>

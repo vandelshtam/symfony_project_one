@@ -1,0 +1,238 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}NPC новая связь!{% endblock %}</title>
+    
+    <link rel="stylesheet" type="text/css" href="{{ asset('asset/css/stylemts.css') }}">
+    <link rel="stylesheet" type="text/css" href="../mysitemts/CSS/style_mts_scss.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+
+<body>
+<!-- nuv -->
+
+{{ include('mts/_nuv_page.html.twig') }}
+     
+<!--  ====================== Сладер =============================== -->
+
+     <article>
+          <div id="slider2">
+                  <input type="radio" name="slider" id="slide11" checked>
+                  <input type="radio" name="slider" id="slide12">
+                  <input type="radio" name="slider" id="slide13">
+                  <input type="radio" name="slider" id="slide14">
+            <div id="slides">
+                <div id="overflow">
+                    <div class="inner">
+                       <div class="slide slide_1">
+                           <div class="slide-content">
+                               <h6>Безлимитный интернет и минуты</h6>
+                            <h2>Супер 25</h2>
+                            <p><a href="#"> Подробнее</a></p>
+                          </div>
+                        </div>
+                        <div class="slide slide_2">
+                           <div class="slide-content">
+                               
+                            <h6>Дарим скидки на смартфоны до 30%!</h6>
+                            <H2>Акции на поккупку сматрфонов</H2>
+                            <p><a href="#"> Подробнее</a></p>
+                          </div>
+                        </div>
+                        <div class="slide slide_3">
+                           <div class="slide-content">
+                            <h6>Скидки на гаджеты  до 50% при покупке смартфона</h6>
+                            <H2>Нужны подарки - это к МТС</H2>
+                            <p><a href="#"> Подробнее</a></p>
+                          </div>
+                        </div>
+                        <div class="slide slide_4">
+                           <div class="slide-content">
+                            <h6>IVI ТВ Кино ждет тебя!</h6>
+                            <H2>На тарифе Безлимитище+</H2>
+                            <p><a href="#"> Подробнее</a></p>
+                          </div>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+    
+                  <div id="controls" >
+                      <label for="slide11" ></label>
+                      <label for="slide12" ></label>
+                      <label for="slide13" ></label>
+                      <label for="slide14" ></label>
+                  </div>
+                  <div id="bullets" >
+                      <label for="slide11" >1</label>
+                      <label for="slide12" >2</label>
+                      <label for="slide13" >3</label>
+                      <label for="slide14" >4</label>
+                  </div>
+                </div>
+              </article>
+<!-- ==================== основная часть страницы ========================= -->
+
+    <main>
+        <div class="main">
+            <div class="myMTS_replenish">
+                <div class="myMTS"><!-- блок мой МТС -->
+                    <h3>Мой МТС</h3>
+                    <p>Mаксимум возможностей для управления счётом и услугами</p>
+                    <p><a href="#">Подробнее</a></p>    
+                </div>
+                <div class="replenish"> <!--  блок пополнить онлайн -->
+                    <h3>Пополнить онлайн без комисии</h3>
+                    <div class="type_of_payment" >
+                   
+                    <div  class="elem">
+                        <input type="radio" name="radio" value="ввести текст" id="input1">
+                            <label for="input1">Услуги связи</label>
+                        <input type="radio" name="radio" value="ввести текст" id="input2">
+                            <label for="input2">Домашний интернет</label>
+                        <input type="radio" name="radio" value="ввести текст" id="input3">
+                            <label for="input3">Рассрочка</label>
+                        <input type="radio" name="radio" value="ввести текст" id="input4">
+                            <label for="input4">Задолженность</label>
+                    </div>
+                    <div class="elem2">
+                        <input type="radio" name="radio" value="ввести текст" id="input5">
+                            <label for="input5">Карта мир</label>
+                        <input type="radio" name="radio" value="ввести текст" id="input6">
+                            <label for="input6">Карты других банков</label>
+                    </div>
+                    <div class="elem3">
+                        <input type="text" name="Префикс номера телефона" value="+375" disabled="" id="input10" class="input_forms">
+                        <input type="text" placeholder="Номер телефона"  id="input7" class="input_forms">
+                        <input type="text" placeholder="Сумма"  id="input8" class="input_forms">
+                        <input type="text" placeholder="e-mail для отправки чека"  id="input9" class="input_forms">
+                        <a href="#" id="button_enter">Продолжить</a>
+                    </div>
+                    
+                    
+                </div>
+      
+                    <div class="elem4">
+                    <a href="#" id="details">Подробнее о сервисе</a>   
+                    </div>
+                </div>
+                    
+            </div>
+        
+    
+
+    <!-- ============== Полезные сервисы ============= -->
+    <div class="useful_services"> <!--Внешний блок-->
+
+        <div  class="useful"><!--дополнительный внешний блок-->
+
+        <div class="tariffs_servises"><!--Блоки сервисов (внутренние)-->
+             <div class="tariffs"><a href="#"class="tariffs_tariffs" >MTSBobile<a class="tariffs1" href="#" >МТС</a><a slass="tariffs2" href="#">MOBILE</a></a></div><!--Название-ссылка внутренних блоков сервисов-->
+             <div class="tariffs3 tariffs9" ><a href="#">Участвуйте в программе лояльности и получайте бонусы, подарки от партнеров и другие вознаграждения</a></div><!--Внутреннее содержание блоков сервисов-->
+         </div>
+        <div class="tariffs_servises">
+             <div class="tariffs"><a href="#"class="tariffs_tariffs" >MTSBobile</a><a class="tariffs1" href="#" >МТС</a><a slass="tariffs2" href="#">HOME</a></div>
+             <div class="tariffs3 tariffs4" ><a href="#"> Проводной домашний интернет на высокой скорости и 4 номера с безлимитом мобильного интернета!</a></div>
+        </div>
+        <div class="tariffs_servises">
+             <div class="tariffs"><a href="#"class="tariffs_tariffs" >MTSBobile</a><a class="tariffs1" href="#" >МТС</a><a slass="tariffs2" href="#">ФИНАНСЫ</a></div>
+             <div class="tariffs3 tariffs10" ><a href="#">Участвуйте в программе лояльности и получайте бонусы, подарки от партнеров и другие вознаграждения</a></div>
+         </div>
+        <div class="tariffs_servises">
+             <div class="tariffs"><a href="#"class="tariffs_tariffs" >MTSBobile</a><a class="tariffs1" href="#" >МТС</a><a slass="tariffs2" href="#">МЕДИА</a></div>
+             <div class="tariffs3 tariffs6" ><a href="#">МТС ТВ больше чем ТВ! Интерактивные телевидение, кино, спорт и мультфильмы</a></div>
+        </div>
+        <div class="tariffs_servises">
+             <div class="tariffs"><a href="#"class="tariffs_tariffs" >MTSBobile</a><a class="tariffs1" href="#" >МТС</a><a slass="tariffs2" href="#">РИТЕЙЛ</a></div>
+             <div class="tariffs3 tariffs7" ><a href="#">Выгодные предложения на оборудование от мировых производителей</a></div>
+         </div>
+        <div class="tariffs_servises">
+             <div class="tariffs"><a href="#"class="tariffs_tariffs" >MTSBobile</a><a class="tariffs1" href="#" >МТС</a><a slass="tariffs2" href="#">БОНУС</a></div>
+             <div class="tariffs3 tariffs8" ><a href="#">Участвуйте в программе лояльности и получайте бонусы, подарки от партнеров и другие вознаграждения</a></div>
+         </div>   
+        </div>
+    </div>
+      <!-- ================Полезные ссылки ======-->
+    <div  class="useful_links_header">
+            <div id="useful_links_top">
+                <h3>Полезные ссылки</h3>
+                <p>Как стать абонентом МТС, развитие сети, роуминг, акции и скидки</p>
+            </div>
+            <div class="useful_links">
+                 <div id="links1"><a href="#"class="tariffs_tariffs" >Перейти в МТС</a></div>
+                 <div id="links2"><a href="#"class="tariffs_tariffs" >Акции</a></div>
+                 <div id="links3"><a href="#"class="tariffs_tariffs" >Салоны связи</a></div>
+                 <div id="links4"><a href="#"class="tariffs_tariffs" >Карта покрытия</a></div>
+                 <div id="links5"><a href="#"class="tariffs_tariffs" >Роуминг и межд.звонки</a></div>
+                 <div id="links6"><a href="#"class="tariffs_tariffs" >MTS Бонус</a></div>
+                 <div id="links7"><a href="#"class="tariffs_tariffs" >Сервисные центры</a></div>
+            </div> 
+    </div> 
+ <!-- =================  Новости МТС. ============================== -->
+ <!--========  левый див ============= -->
+    <div class="newsBig">
+        <div class="news">
+            <span id="sl_i1" class="sl_command sl_i"></span>
+            <span id="sl_i2" class="sl_command sl_i"></span>
+            <span id="sl_i3" class="sl_command sl_i"></span>
+            <span id="sl_i4" class="sl_command sl_i"></span>
+    
+        <div id="slideshow">
+            <a class="commands prev commands1" href="#sl_i4" title=""></a>
+            <a class="commands next commands1" href="#sl_i2" title=""></a>
+            <a class="commands prev commands2" href="#sl_i1" title=""></a>
+            <a class="commands next commands2" href="#sl_i3" title=""></a>
+            <a class="commands prev commands3" href="#sl_i2" title=""></a>
+            <a class="commands next commands3" href="#sl_i4" title=""></a>
+            <a class="commands prev commands4" href="#sl_i3" title=""></a>
+            <a class="commands next commands4" href="#sl_i1" title=""></a>
+        
+        <div class="container">
+            <div class="c_slider"><a href="#" id="post1">Подписаться на новости<a href="#" id="news_post">Все новости</a></div>
+        </div>      
+        </div>
+        </div>
+<!--  =========== правый див =============-->
+        <div class="news">
+            <span id="sl_i21" class="sl_command sl_i2"></span>
+            <span id="sl_i22" class="sl_command sl_i2"></span>
+            <span id="sl_i23" class="sl_command sl_i2"></span>
+            <span id="sl_i24" class="sl_command sl_i2"></span>
+            
+        <div id="slideshow2">
+            <a class="commands2 prev commands21" href="#sl_i24" title=""></a>
+            <a class="commands2 next commands21" href="#sl_i22" title=""></a>
+            <a class="commands2 prev commands22" href="#sl_i21" title=""></a>
+            <a class="commands2 next commands22" href="#sl_i23" title=""></a>
+            <a class="commands2 prev commands23" href="#sl_i22" title=""></a>
+            <a class="commands2 next commands23" href="#sl_i24" title=""></a>
+            <a class="commands2 prev commands24" href="#sl_i23" title=""></a>
+            <a class="commands2 next commands24" href="#sl_i21" title=""></a>
+        
+        <div class="container2">
+            <div class="c_slider2"><a href="#" id="news_post2">Все новости ритейла</a></div>
+        </div>
+        </div>
+        </div>
+    </div>
+  </main>
+       
+
+
+ <!--  ============ footer ====================-->                 
+{{ include('mts/_footer_page.html.twig') }}
+</body>
+      
+      
+
+      
+
+{% endblock %}
