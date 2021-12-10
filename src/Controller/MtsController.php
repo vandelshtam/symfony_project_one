@@ -15,8 +15,8 @@ class MtsController extends AbstractController
      */
     public function index(): Response
     {
-        return $this->render('mts/index.html.twig', [
-            'controller_name' => 'MtsController',
+        return $this->render('PlumbInstall/index.html.twig', [
+            'controller_name' => 'PlumbController',
         ]);
     }
 

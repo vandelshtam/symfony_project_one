@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>add.new</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&family=Roboto:wght@100;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel = "stylesheet"  href="css/jquery.fancybox.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/jquery.formstyler.css">
+    <!--<link rel="stylesheet" href="css/jquery.formstyler.theme.css">-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+</head>
+<body>
+     <header class="hedaer">
+        <div class="header_top">
+            <div class="container">
+                <div class="header_contacts">
+                    <a class="header_phone" href="tel:79957771830">+7(995) 777 18 30</a>
+                    <a class="header_email" href="#">mvlju977@gmail.com</a>
+                    <a data-fancybox data-src="#hidden-content" href="javascript:;" class="header_btn">Бесплатная консультация</a>
+                </div>
+            </div>
+        </div>
+        <div class="header_content">
+            <div class="container">
+                <div class="header_content-inner">
+                    <div class="header_logo">
+                        <a href="#">
+                            <img src="img/logo.png" alt="" class="logo">
+                        </a>
+                    </div>
+                    <nuv class="menu">
+                        <div class="header_btn-menu">
+                            <span class="icon-bars"></span>
+                        </div>
+                        <ul>
+                            <li><a href="#">Главная </a></li>
+                            <li><a href="#">О компании</a></li>
+                            <li><a href="#">Услуги</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+                    </nuv>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="add_new-form">
+        <div class="container">
+            
+                <div class="form_content">
+                    <div class="form_title-box">
+                        <div class="form_title">
+                            Добавить новостную статью
+                        </div>
+                        <div class="form_text">
+                            При заполнении формы новостной статьи,пожалуйста следуйте правилам публикации статей на сайте и подсказкам системы.
+                        </div>
+                    </div>
+                    <div class="add_new-form form_box">
+                        <form action="">
+                            <div class="add_new-form form_box-inner">
+                                <div class="add_new-form form_box-left">
+                                    <label for="">
+                                        Название статьи, не более 70 знаков
+                                        <input type="text">
+                                    </label>
+                                    <label for="file-upload" class="add_new custom-file-upload">
+                                        Загрузка фотографии/картинки для названия статьи и превью статьи в ленте новостей
+                                        <input type="file">
+                                    </label>
+                                    
+                                    <label for="file-upload" class="add_new custom-file-upload">
+                                        Загрузка главной (основной) фотографии/картинки для  статьи
+                                        <input type="file">
+                                    </label>
+                                    <label for="">
+                                        Комментарий к главной фотографии/картинке новостной статьи, не более 70 символов
+                                        <input type="text">
+                                    </label>
+                                    <label for="file-upload" class="add_new custom-file-upload">
+                                        Загрузка дополнительной фотографии/картинки к статье, меньшего размера которая будет находится внутри текста статьи
+                                        <input type="file">
+                                    </label>
+                                    <label for="">
+                                        Комментарий к дополнительной фотографии/картинке к новостной статье, не более 70 символов
+                                        <input type="text">
+                                    </label>
+                                    <label for="">
+                                        Комментарий к главной фотографии/картинке новостной статьи, не более 70 символов
+                                        <input type="text">
+                                    </label>   
+                                </div>
+                                <div class="add_new-form form_box-right">
+                                    <label for="">
+                                        Краткое превью статьи для ленты новостей, не более 500 знаков.
+                                        <textarea class="textarea-prev"></textarea>
+                                    </label>
+                                    <label for="">
+                                        Текст статьи
+                                        <textarea class="textarea-article"></textarea>
+                                    </label>
+                                    <label for="">
+                                        Автор, ссылки, источники
+                                        <textarea class="textarea-author"></textarea>
+                                    </label>
+                                    <button class="default-btn" type="submit">Сохранить статью</button>
+                                </div>
+                            </div>    
+                        </form>       
+                    </div>   
+                </div>
+            
+        </div>
+    </section>
+    <div id="hidden-content">
+        <form action="">
+            <input type="text" placeholder="Ваше имя">
+            <input type="text" placeholder="Ваш телефон">
+            <input type="submit" value="Отправить">
+        </form>
+    </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/jquery.formstyler.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>
