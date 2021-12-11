@@ -10,6 +10,7 @@ use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 
 class ProductController extends AbstractController
 {
@@ -24,11 +25,11 @@ class ProductController extends AbstractController
     /**
      * @Route("/product/create", name="create_product")
      */
-    public function createProduct(ManagerRegistry $doctrine): Response
+    public function createProduct(ManagerRegistry $doctrine, Request $request) : Response
     {
         // вы можете извлечь EntityManager через $this->getDoctrine()
         // или вы можете добавить к действию аргумент: createProduct(EntityManagerInterface $entityManager)
-        $entityManager = $doctrine->getManager();
+        $entityManager = $doctrine()->getManager();
 
         $product = new Product();
         $product->setName('Keyboard');
